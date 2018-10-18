@@ -1,6 +1,6 @@
 ---
 title: Welcome To The DMN
-date 2018-10-18 16:34:00 Z
+date: 2018-10-18 16:34:00 Z
 permalink: /producer
 
 ---
