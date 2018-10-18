@@ -1,8 +1,4 @@
 ---
-title: Welcome To The DMN
-date 2018-10-18 16:34:00 Z
-permalink: /producer
-
 ---
 
 # Welcome to the Direct Monitizatin Network
