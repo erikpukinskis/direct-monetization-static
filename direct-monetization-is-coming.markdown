@@ -1,5 +1,5 @@
 ---
-title: Welcome To The DMN
+title: Welcome To The Direct Monetization Network
 date: 2018-10-18 16:34:00 Z
 permalink: /producer
 
