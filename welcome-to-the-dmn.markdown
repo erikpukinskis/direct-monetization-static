@@ -6,15 +6,16 @@ permalink: "/consumer.html"
 
 # Welcome to the Direct Monitizatin Network
 
-### Get access. Support creators. Elide ads.
+### Get access. Support creators. Drop ads.
 
-The Direct Monitization Network is a tip-jar _and_ a paywall. It's the opposite of a third-party ad network; you opt in, you keep control of your data and experience, and website creators keep control of their websites. 
+The Direct Monitization Network is will be a full-stack suite of tools for creators and their audiences, implementing a 402-based internet payment schmeme. 
 
-<div>
-  <button disabled="disabled">Create your account</button>
-  <button disabled="disabled">Log in</button>
-</div>
+Go [here]({{"/402_table_of_contents.html" | relative_url}}) to read about the standard we're building.
 
-We'll start a one-year alpha period soon.
+This whole website is on [GitHub](https://github.com/ShapeOfMatter/direct-monetization-static); for now that's how to contribute.
 
+```
+TODO: A non-technical summary.
+TODO: Better instructions for submitting edits.
+```
 
