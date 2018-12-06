@@ -12,9 +12,10 @@
   <div class="document">
     <h1>{{ page.title }}</h1>
     <div class="toc">
-       {% for page in site.pages %}
+      {% assign pages = site.html_pages | sort: 'title' %}
+      {% for page in pages %}
         <span class="item"><a href="{{ page.url }}">{{ page.title }}</a></span>
-        {% endfor %}
+      {% endfor %}
     </div>
     {{content}}
   </body>

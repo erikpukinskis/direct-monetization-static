@@ -7,15 +7,19 @@ body {
 }
 
 .document {
-  width: 100%;
   padding: 0% 10%;
 }
 
 .toc {
   border: 1px solid $dark-color;
+  margin: 2px;
+  padding: 2px;
+  max-width: 700px;
   font-size: 80%;
   .item {
-    margin: 3px;
+    display: inline-block;
+    margin: 2px;
+    padding: 2px;
     border: 1px solid $dark-color;
     color: $secondary-font-color;
   }
@@ -23,7 +27,7 @@ body {
 
 h1 {
   font-size: 250%;
-  margin: 1vw;
+  margin: 1vw 1vw 1vw -2vw;
 }
 
 h2 {
