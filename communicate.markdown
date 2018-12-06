@@ -1,4 +1,10 @@
-# Advertising required receipts
+---
+title: Advertising required receipts
+date: 2018-12-06 12:00:00 Z
+permalink: "/communicate.html"
+description: The 402-Receipt Proposed standard.
+---
+
 The prefered way to let a client know that certain resoures require receipts is to use a menu XML document.  
 **Inline markers for resources at time-of-use are strongly desireable, but we need to find a suitablely small extension from existing standards/conventions to support them.**  
 Finally, a response can include information about receipts that _should have been_ submitted for that resource.

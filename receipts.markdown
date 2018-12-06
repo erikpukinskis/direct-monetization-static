@@ -1,4 +1,10 @@
-# Receipts
+---
+title: Receipts
+date: 2018-12-06 12:00:00 Z
+permalink: "/receipts.html"
+description: The 402-Receipt Proposed standard.
+---
+
 A receipt is a message specifying that someone paid for access to a resource, or should otherwise be given access to the resource.
 
 A receipt is signed by an issuer; in principal anyone may issue and sign receipts, but the recieving party is only bound to honor receipts signed by the signatories specified in the Receipt Definition. It is up to the parties involved to agree in advance what is promised when a receipt is signed; here we assume that the signatory has collected the money in question from the requestor and will forward those funds to the host by some outside channel.

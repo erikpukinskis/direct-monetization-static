@@ -1,4 +1,10 @@
-# The 402-Receipt Proposed standard
+---
+title: The 402-Receipt Proposed standard
+date: 2018-12-06 12:00:00 Z
+permalink: "/introduction.html"
+description: The 402-Receipt Proposed standard.
+---
+
 #### Version negative one.
 
 The 402 response code implies that a request is being denied because payment must be provided for the requested resource. No standard way of following up to a 402 response has been normalized, as the 402 response code has seen only neiche useage, mostly for subscription-only APIs, and is effectivly non-standard for human-facing http resources.

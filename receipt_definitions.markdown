@@ -1,4 +1,10 @@
-# Receipt Definitions
+---
+title: Receipt Definitions
+date: 2018-12-06 12:00:00 Z
+permalink: "/receipt_definitions.html"
+description: The 402-Receipt Proposed standard.
+---
+
 A **Receipt Definition** must make clear to a client what it will need to do to make a receipt that will be accepted in order to access the relevant resource. In particular it contains
 
 - requirements for the receipt contents
