@@ -2,7 +2,8 @@
 title: Welcome to the Direct Monitizatin Network
 date: 2018-10-16 16:34:00 Z
 permalink: "/consumer.html"
-description: The Direct Monitization Network will be a full-stack suite of tools for creators and their audiences, implementing a 402-based internet payment scheme.
+description: The Direct Monitization Network will be a full-stack suite of tools for
+  creators and their audiences, implementing a 402-based internet payment scheme.
 ---
 
 ### Get access. Support creators. Drop ads.
