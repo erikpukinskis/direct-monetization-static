@@ -21,3 +21,10 @@ defaults:
   values:
     layout: page
 permalink: pretty
+site_colors:
+  primary_background: "#FFFFFF"
+  light_background: "#DDDDDD"
+  dark_background: "#999999"
+  primary_font: "#000000"
+  secondary_font: "#333333"
+  tertiary_font: "#CCCCCC"
