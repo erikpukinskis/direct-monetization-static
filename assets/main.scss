@@ -1,0 +1,17 @@
+---
+---
+
+$primary-color: {{ site.site_colors.primary_background }};
+$light-color: {{ site.site_colors.light_background }};
+$dark-color: {{ site.site_colors.dark_background }};
+
+$font-color: {{ site.site_colors.primary_font }};
+$secondary-font-color: {{ site.site_colors.secondary_font }};
+$tertiary-font-color: {{ site.site_colors.tertiary_font }};
+
+$heading-font: 'serif';
+$content-font: 'sans-serif';
+
+@import "master";
+
+

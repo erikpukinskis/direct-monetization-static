@@ -1,0 +1,66 @@
+body {
+  font-family: $content-font;
+  background-color: $primary-color;
+  margin: 5px;
+  color: $font-color;
+  font-size: 13px;
+}
+
+.document {
+  width: 100%;
+  padding: 0% 10%;
+}
+
+.toc {
+  border: 1px solid $dark-color;
+  font-size: 80%;
+  .item {
+    margin: 3px;
+    border: 1px solid $dark-color;
+    color: $secondary-font-color;
+  }
+}
+
+h1 {
+  font-size: 250%;
+  margin: 1vw;
+}
+
+h2 {
+  font-family: $heading-font;
+  font-size: 180%;
+  margin: .8vw;
+}
+h3 {
+  font-family: $heading-font;
+  font-size: 120%;
+  margin: .5vw;
+}
+
+h4 {
+  font-family: $heading-font;
+  font-style: italic;
+  font-size: 120%;
+  margin: .3vw;
+}
+
+p {
+  padding: 0.5em;
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+  font-weight: bolder;
+  text-decoration: underline;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+
