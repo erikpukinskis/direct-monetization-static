@@ -8,6 +8,10 @@ collections:
   uploads:
     title: Uploads
     output: true
+  proposal:
+    title: The Proposed 402-Receipts Standard
+    output: true
+    permalink: none
 defaults:
 - scope:
     path: ''
@@ -20,6 +24,12 @@ defaults:
     type: pages
   values:
     layout: page
+- scope:
+    path: ''
+    type: proposal
+  values:
+    layout: documentation
+
 permalink: pretty
 site_colors:
   primary_background: "#FFFFFF"
