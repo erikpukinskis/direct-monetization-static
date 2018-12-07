@@ -3,6 +3,7 @@ title: The 402-Receipt Proposed standard
 date: 2018-12-06 12:00:00 Z
 permalink: "/introduction.html"
 description: The 402-Receipt Proposed standard.
+documentation_order: 1
 ---
 
 #### Version negative one.

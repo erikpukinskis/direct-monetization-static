@@ -3,6 +3,7 @@ title: Advertising required receipts
 date: 2018-12-06 12:00:00 Z
 permalink: "/communicate.html"
 description: The 402-Receipt Proposed standard.
+documentation_order: 2
 ---
 
 The preferred way to let a client know that certain resources require receipts is to use a menu XML document.  
