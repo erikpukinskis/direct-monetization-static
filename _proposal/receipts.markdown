@@ -12,7 +12,7 @@ A receipt is signed by an issuer; in principal anyone may issue and sign receipt
 
 A **Bare Receipt** is an object, represented in json, describing payment made for a particular item at a particular time. In the simple case a receipt will contain
 
-- A unix timestamp `time`, as an integer representing seconds. Parties shall generally assume that the timestamp is accurate, even in the face of contradicting evidence. 
+- A unix timestamp `time`, as an integer representing seconds. (Parties shall generally assume that the timestamp is accurate, even in the face of contradicting evidence. This is to avoid conflits with any mixnet impelmentations. A receipt dated in the future need not be accpeted.)
 - A `unit` of currency. [ISO4217](https://en.wikipedia.org/wiki/ISO_4217) codes are recommended. 
 - An amount `amount` of that currency, as a decimal number in the currency's major units.
 - A namespace `domain`, typically a domain name, for the item being paid for.

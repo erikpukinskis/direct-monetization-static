@@ -72,5 +72,7 @@ em {
 code {
   font-family: $code-font;
   background: $light-color;
+  display: inline-block;
+  padding: 1px 5px;
 }
 
