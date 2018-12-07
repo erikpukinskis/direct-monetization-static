@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<nav>
+  {% assign pages = proposal.pages | sort: 'documentation_order' %}
+  {% for p in pages %}
+    <span class="nav_item{% if p.title == page.title %} selected{% endif %}">
+      <a href="{{ p.url }}">{{ p.title }}</a>
+    </span>
+  {% endfor %}
+</nav>
+<h1>{{ page.title }}</h1>
+{{ content }}
+
