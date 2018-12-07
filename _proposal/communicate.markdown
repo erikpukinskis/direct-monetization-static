@@ -34,7 +34,7 @@ A menu XML will be structured like so:
 </resourceset>
 ```
 
-Clients will assume that a menu XML is exhaustive, in the sense that all resources for which the menu's scope is a prefix are either included in the menu or do not require receipts, and no page for which the menu's scope is a prefix will us a resource that requires receipts except as specified in the menu.
+Clients will assume that a menu XML is exhaustive, in the sense that all resources for which the menu's scope is a prefix are either included in the menu or do not require receipts, and no page for which the menu's scope is a prefix will use a resource that requires receipts except as specified in the menu.
 
 While it is permissibly for a page to use multiple resources that require separate receipts, clients may perceive this as abuse and take unintended actions such as blocking the resources or prompting the user for action. Hosts are advised to use only a single receipt-requiring resource on each page, or to have all resources used by a page accept a common receipt.
 
