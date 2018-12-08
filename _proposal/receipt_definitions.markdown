@@ -6,7 +6,7 @@ description: The 402-Receipt Proposed standard.
 documentation_order: 5
 ---
 
-A **Receipt Definition** must make clear to a client what it will need to do to make a receipt that will be accepted in order to access the relevant resource. In particular it contains
+A **Receipt Definition** must make clear to a client what receipts would be accepted in order to access the relevant resource. In particular it contains
 
 - requirements for the receipt contents
 - specification about what 3rd-party signatories would be acceptable.

@@ -21,7 +21,7 @@ A **Bare Receipt** is an object, represented in json, describing payment made fo
 
 Two other formats of receipt are anticipated in this standard, covering cases where the requester should not be charged to access the resource.
 
-- In the case that the user shouldn't have to pay for the resource because of some outside agreement, no `unit` or `amount` will be included. Instead a `plan` string specifying the agreement under which the signatory agrees the user should have access will be included.
+- In the case that the user shouldn't have to pay for the resource because of some outside agreement, no `unit` or `amount` will be included. Instead a `plan` string specifying the agreement under which the signatory determined that the user should have access will be included.
 - In the case that the user should have access because of payments they have made _for other resources_, a list `list` of the `uuid`s of those receipts will be included in place of the `unit` and `amount`. The host will typically enforce that the submission signature of such a receipt match the submission signatures of all the listed receipts. 
 
 In order to be submitted, a Bare Receipt must be signed twice to form a **Signed Receipt** (commonly just called a **Receipt**).  
