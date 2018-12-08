@@ -15,7 +15,7 @@ Figuring out what the client will need to do in order for the chosen signatory t
 
 A **Receipt Definition** is an object represented in json:
 
-- Optionally, a `domain`. If provided in the Receipt Definition for an HTTP resource, then this _must_ match the domain of the resource's address.
+- Optionally, a `domain`. If provided in the Receipt Definition for an HTTPS resource, then this _must_ match the domain of the resource's address.
 - Optionally, an `item` identifier. If not provided, then any list of receipts matching the other specifications and totaling to the needed amount will suffice.
 - A list of objects of the form
     - `signers`: A list of acceptable signatories, identified by urls.

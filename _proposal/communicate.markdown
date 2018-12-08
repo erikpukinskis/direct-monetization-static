@@ -44,7 +44,7 @@ In order for clients to know about a menu, pages should include a meta tag in th
 <meta property="receipts:menu" content="https://www.example.com/menu.xml" />
 ```
   
-An HTTP header can also be used, and may be preferable depending on the implementation.
+An HTTPS header can also be used, and may be preferable depending on the implementation.
 
 ```text
 Receipts-Menu: https://www.example.com/menu.xml
