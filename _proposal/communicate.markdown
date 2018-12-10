@@ -65,6 +65,6 @@ An `<meta>` tag can represent the same information, but may require more careful
 <meta property="receipts:accepts" content="Receipt Definition" />
 ```
 
-Such a tag included in the HTML payload of a 402 response would indicate that a different (more complete) version of the page would have been given if the request had included a receipt; this is fine but not an available option for non-html resources.  
+Such a tag included in the HTML payload of a 402 response would indicate that a different (more complete) version of the page would have been given if the request had included a receipt; this is fine but not an available option for non-HTML resources.  
 In a 200 HTML payload it would indicate the supplied receipts (including, possibly, no receipt at all) already fulfilled the requirements. This is less suitable for a tip-jar configuration than it may seem: The client shouldn't have to repeat a request to submit an optional receipt.
 
