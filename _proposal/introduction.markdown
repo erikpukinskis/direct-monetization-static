@@ -6,7 +6,10 @@ description: The 402-Receipt Proposed standard.
 documentation_order: 1
 ---
 
-#### Version negative one.
+#### Goals of this document:
+This document describes a standard way for a website to demand or accept payment for access to resources without having a prior relationship with the customer or at any point collecting any card/bank information. The standard needs to be sufficiently defined that tools within it can be built independently and work together. 
+
+# Version negative one.
 
 The 402 HTTPS response code implies that a request is being denied because payment must be provided for the requested resource. No standard way of following up to a 402 response has been normalized. The 402 response code has seen only niche usage, mostly for subscription-only APIs, and is effectively non-standard for human-facing HTTPS resources.
 
