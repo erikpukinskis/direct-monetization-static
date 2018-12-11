@@ -6,7 +6,7 @@ description: The 402-Receipt Proposed standard.
 documentation_order: 1
 ---
 
-#### Goals of this document:
+#### Goal of this document:
 This document describes a standard way for a website to demand or accept payment for access to resources without having a prior relationship with the customer or at any point collecting any card/bank information. The standard needs to be sufficiently defined that tools within it can be built independently and work together. 
 
 # Version negative one.
