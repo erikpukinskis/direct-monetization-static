@@ -8,16 +8,31 @@ documentation_order: 4
 
 A receipt is a message specifying that someone paid for access to a resource, or should otherwise be given access to the resource.
 
-A receipt is signed by an issuer; in principal anyone may issue and sign receipts, but the receiving party is only bound to honor receipts signed by the signatories specified in the Receipt Definition. It is up to the parties involved to agree in advance what is promised when a receipt is signed; here we assume that the signatory has collected the money in question from the requester and will forward those funds to the host by some outside channel.
+There are several objects nested inside each other that, in differnent circumstances, might each be called a receipt.
 
-A **Bare Receipt** is an object, represented in json, describing payment made for a particular item at a particular time. In the simple case a receipt will contain
+- A **Receipt Submission** is the value of a `Receipts-Receipt` HTTP request header. It claims ownership of the contained Signed Receipt, and it claims that the Signed Receipt is sufficient to get access to the requested recource.
+- A **Signed Receipt** is issued by a Signatory to mark that a Client has made the payments described in the Bare Receipt.
+- A **Bare Receipt** describes a particular payment for a particular resource.
+
+## Parties
+- The **Host** is the server recieving the HTTP request with the `Receipts-Receipt` header. We assume that the Host's address will match the `domain` (and often `item`) of the Bare Receipt, and this may be enforced by the Client or Signatory. The Host's role is to validate the receipt; they must accept any receipt satasfying the Receipt Definition. 
+- The **Client** is requesting a resource for which a receipt is required. They need to compose the Bare Receipt and communicate with the Signatory to get it signed.
+- The **Signatory** signs the receipt. It is up to the parties involved to agree in advance what is promised when a receipt is signed; here we assume that the Signatory has collected the money in question from the Client and will forward those funds to the Host by some outside channel.
+
+
+
+## Bare Receipt
+A Bare Receipt is a json object describing payment made for a particular item at a particular time. A Bare Receipt will contain
 
 - A unix timestamp `time`, as an integer representing seconds. (Parties shall generally assume that the timestamp is accurate, even in the face of contradicting evidence. This is to avoid conflits with any mixnet impelmentations. A receipt dated in the future need not be accpeted.)
 - A `unit` of currency. [ISO4217](https://en.wikipedia.org/wiki/ISO_4217) codes are recommended. 
 - An amount `amount` of that currency, as a decimal number in the currency's major units.
 - A namespace `domain`, typically a domain name, for the item being paid for.
-- An `item` identifier, typically the uri of the resource.
+- An `item` identifier, typically the URL path of the resource.
 - A `uuid` for the receipt itself. This may be used to prevent reuse of a receipt by multiple parties.
+
+## Signed Receipt
+A signed Receipt is a json object describing a 
 
 Two other formats of receipt are anticipated in this standard, covering cases where the requester should not be charged to access the resource.
 
