@@ -8,23 +8,23 @@ description: The Direct Monetization Network will be a full-stack suite of tools
 
 ### Get access. Support creators. Drop ads.
 
-The Direct Monetization Network will be a full-stack suite of tools for creators and their audiences, implementing a 402-based internet payment scheme. 
+-------------------------------------------
 
-Go [here]({{"/introduction.html" | relative_url}}) to read draft negative-one of the standard we'll be implementing.
+The Direct Monetization Network (DMN) will be a full-stack suite of tools for creators and their audiences, implementing a 402-based internet payment scheme. 
+
+Read [draft negative-one of the standard]({{"/introduction.html" | relative_url}}) we'll be implementing.
 
 ## How will I use this?
-**Here's what it's like for a customer
-Authors, journalists, artists, and other creators will be able to post their work online and get paid for it by visitors
-without any account management of exchange of payment information. networks like ours will anonymously connect a plugin in the customer's browser (or a cookie-based network account
-```
-TODO: A non-technical summary.
-TODO: Better instructions for submitting edits.
-```
+**Here's what it's like for a customer:** You sign up for a managed account, or host your own wallet and give it access to your DMN account. As you browse the web your account is charged for pages you visit. Your wallet protects you from unexpected charges and abuse. The Network blocks payments to fraudulent websites. The underlying protocol makes it possible for this to happen without the websites knowing who you are and without the Network knowing what websites you visit.  
+**Here's what it's like for a creator:** You set up a hosted tipjar, or you host pay-walled content in our CDN, or you host your own receipt handler. You configure your handler to accept receipts from the DMN network, and make sure you comply with our standards; this will cover things like pricing structure and how any ads are served. Members of the network will be charged as they visit your site. Non-members might be blocked, encouraged to join, or shown ads depending on your configuraiton.
+**Here's what it looks like to the internet:** Anyone can host their own wallet, which is the only part of the system with full visability of its users' actions. Anyone can host their own receipt handler. Wallets and receipt handlers can interact with multiple networds, so an individual network has limited leverage over its memebers. A website can even act as its own "network", seamlessly approximating a traditional paywall within the 402-Receipts system. 
+
 ## Roadmap:
 - _Dec 2018_: Reach out to peers and industry for feedback.
-- _Jan 20@9_: Clarify cryptographic protocols.
+- _Jan 2019_: Clarify cryptographic protocols.
 - _Feb 2019_: Version 0 of the 402-Receipt standard.
 - _Spring 2019_: Implement wallets and hosts as SaaS, and user-code as php and java-script snippets. **Also** find peers interested in working on parallel or complementary implementations.
 - _Winter 2019_: Version 1 of the 402-Receipt standard. Full-stack suite of modular, open-source tools usable as SaaS and self-hosted components.
 
-This whole website is on [GitHub](https://github.com/ShapeOfMatter/direct-monetization-static); for now that's how to contribute.
+## How to help:
+This whole website, including the proposed standard, is on [GitHub](https://github.com/ShapeOfMatter/direct-monetization-static). Other avenues of feedback will be made avaliable soon.
