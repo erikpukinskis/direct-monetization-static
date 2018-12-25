@@ -12,8 +12,7 @@ Finally, a response can include information about receipts that _should have bee
 
 ## Menu XML
 A menu XML is conceptually similar to a [sitemap.xml](https://www.sitemaps.org/protocol.html).  
-`TODO: Provide a formal namespace definition`
-
+`TODO: Provide a formal namespace definition`  
 A menu XML will be structured like so:
 
 ```xml
@@ -24,7 +23,7 @@ A menu XML will be structured like so:
   </scope>
   <resource>
     <loc>https://www.example.com/path/image.png</loc>
-    <acceptreceipts>Receipt Definition</acceptreceipts>
+    <receiptdefinition>Receipt Definition</receiptdefinition>
     <usedby>
       <url>https://www.example.com/page.html</url>
       ...
@@ -66,5 +65,5 @@ An `<meta>` tag can represent the same information, but may require more careful
 ```
 
 Such a tag included in the HTML payload of a 402 response would indicate that a different (more complete) version of the page would have been given if the request had included a receipt; this is fine but not an available option for non-HTML resources.  
-In a 200 HTML payload it would indicate the supplied receipts (including, possibly, no receipt at all) already fulfilled the requirements. This is less suitable for a tip-jar configuration than it may seem: The client shouldn't have to repeat a request to submit an optional receipt.
+In a 200 HTML payload it would indicate the supplied receipts (including, possibly, no receipt at all) already fulfilled the requirements. This may be less suitable for a tip-jar configuration than it may seem: The client shouldn't have to repeat a request to submit an optional receipt, and they won't know about a Menu XML during their first request.
 
