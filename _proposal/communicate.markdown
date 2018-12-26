@@ -37,9 +37,9 @@ A menu.xml will be structured like so:
 
 | Tag | Description |
 |---------|-------------|
-| `scope` | An absolute or relative address prefix or  an absolute address. Specifically, if the `scope` ends in a `/` then the scope of the menu is understood to be all addresses for which the `scope` is a prefix. The `scope` should not have a query-string or hash; even in the case of an absolute address all variations distinguished by query-strings or hashs are included in the one scope. |
+| `scope` | An absolute or relative address prefix or  an absolute address. Specifically, if the `scope` ends in a `/` then the scope of the scope is understood to be all addresses for which the `scope` is a prefix. The `scope` should not have a query-string or hash; even in the case of an absolute address all variations distinguished by query-strings or hashs are included in the one scope. |
 | `resource` | A resource (identified by the `loc` and `verbs`) for which receipts are required. All resources within the scope, _and all resources used by pages within the scope_, for which receipts are required or accepted, must be listed. |
-| `loc` | The absolute address of the resource for which a receipt is required in order to access. If there is not a query string in the `loc`, it's assumed that query strings will not identify a different resource or necessitate different receipts; they may still be used. Differentiating resources by hashes is not inteligable; hashes are not allowed in the `loc` |
+| `loc` | The absolute address of the resource for which a receipt is required in order to access. If there is not a query string in the `loc`, it's assumed that query strings will not identify a different resource or necessitate different receipts. Differentiating resources by hashes is not inteligable; hashes are not allowed in the `loc` |
 | `verbs` | Optional; if ommitted it's assumed that the HTTP verb won't affect the resource or required receipts |
 | `verb` | An HTTP verb (technically, a [method](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)). |
 | `definitions` | The [Receipt Definition]({{ "/receipt_definitions.html" | relative_url }}) for the specified resource. |
