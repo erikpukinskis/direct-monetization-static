@@ -82,3 +82,12 @@ code {
   background: $light-color;
 }
 
+table {
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid $dark-color ;
+  padding: 0.5em;
+}
+
