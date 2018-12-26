@@ -88,5 +88,3 @@ A **Receipt Definition** is an XML object within the same namespace as a Menu XM
 | `amount` | A decimal number amount of that currency's major units. |
 | `plan` | An identifier which is assumed to mean something to the various parties involved.
 
-`TODO: This should probably get compressed, and maybe more explanaintion about how to read it and why it's shaped like it is would be good.`
-

@@ -40,7 +40,7 @@ The client will obtain a signature for the receipt from the chosen signatory usi
 ## Receipt Submission
 The receipt submission will contain the Signed Receipt (Bare Receipt plus Signatory signature) and a time-of-use timestamp to be compared against the freshness requirement of the Receipt Definition. It also includes the Client's signature of the receipt/time-of-use pair, and the public key needed to check that signature. This public key is used by the Host as an identifier for the Client; the Client may reuse a key pair or not depending if they wish to be identifiable as the same user over time.
 
-### Bundled Receipts
+## Bundled Receipts
 In the case that the Client should have access because of previously submitted payments they have made _for other resources_, a list of the `uuid`s of those receipts may be used in place of the Signed Receipt in the Receipt Submission. The Host will typically enforce that the Client signature of such a receipt match the submission signatures of all the listed receipts.  
 For example, a website might give Receipt Definitions to the effect of _"Pages are \$0.05 each, up to \$3.00/month."_. Once a customer had viewed enough pages that their receipts for that month totaled \$3.00, their Client would begin submitting Bundled Receipts instead of buying a receipt for each page. 
 
