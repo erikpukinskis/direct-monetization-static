@@ -6,7 +6,7 @@ description: The 402-Receipt Proposed standard.
 documentation_order: 2
 ---
 
-The preferred way to let a client know that certain resources require receipts is to use a menu.XML document.  
+The preferred way to let a client know that certain resources require receipts is to use a menu.xml document.  
 **Inline markers for resources at time-of-use are strongly desirable, but we need to find a suitably small extension from existing standards/conventions to support them.**  
 Finally, a response can include information about receipts that _should have been_ submitted for that resource, typically as part of a 402 response.
 
