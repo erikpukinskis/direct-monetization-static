@@ -37,10 +37,10 @@ A menu.xml will be structured like so:
 
 | Tag | Description |
 |---------|-------------|
-| `scope` | An absolute or relative address prefix or  an absolute address. Specifically, if the `scope` ends in a `/` then the scope of the scope is understood to be all addresses for which the `scope` is a prefix. The `scope` should not have a query-string or hash; even in the case of an absolute address all variations distinguished by query-strings or hashs are included in the one scope. |
+| `scope` | An absolute or relative address prefix or  an absolute address. Specifically, if the `scope` ends in a `/` then the scope of the scope is understood to be all addresses for which the `scope` is a prefix. The `scope` should not have a query-string or hash; even in the case of an absolute address all variations distinguished by query-strings or hashes are included in the one scope. |
 | `resource` | A resource (identified by the `loc` and `verbs`) for which receipts are required. All resources within the scope, _and all resources used by pages within the scope_, for which receipts are required or accepted, must be listed. |
-| `loc` | The absolute address of the resource for which a receipt is required in order to access. If there is not a query string in the `loc`, it's assumed that query strings will not identify a different resource or necessitate different receipts. Differentiating resources by hashes is not inteligable; hashes are not allowed in the `loc` |
-| `verbs` | Optional; if ommitted it's assumed that the HTTP verb won't affect the resource or required receipts |
+| `loc` | The absolute address of the resource for which a receipt is required in order to access. If there is not a query string in the `loc`, it's assumed that query strings will not identify a different resource or necessitate different receipts. Differentiating resources by hashes is not intelligible; hashes are not allowed in the `loc` |
+| `verbs` | Optional; if omitted it's assumed that the HTTP verb won't affect the resource or required receipts |
 | `verb` | An HTTP verb (technically, a [method](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)). |
 | `definitions` | The [Receipt Definition]({{ "/receipt_definitions.html" | relative_url }}) for the specified resource. |
 | `usedby` | A list of the `url`s of pages that use the resource. `TODO: Is this actually necessary? A defined concept of "uses" _is_ necessary in order to be clear about what needs to be in scope, but provided people are compling with the "in scope" requirements the n-n relationships wouldn't need to be listed. At a minimum, a wildcard system for the `url`s would be good.` |
@@ -59,7 +59,7 @@ Receipts-Menu: https://www.example.com/menu.xml
 It's perfectly intelligible for each page to have its own menu; in this situation the host is encourage to use [data URIs](https://en.wikipedia.org/wiki/Data_URI_scheme) instead of serving the menu separately.
 
 ## Response headers
-A resource that accepts receipts should say so in the response header (or, equivilantly, an HTML `meta` tag) even when responding to a request that already included the needed receipt. `TODO: give an explaination for how to compress a [Receipt Definition]({{ "/receipt_definitions.html" | relative_url }}) for use below.`
+A resource that accepts receipts should say so in the response header (or, equivalently, an HTML `meta` tag) even when responding to a request that already included the needed receipt. `TODO: give an explaination for how to compress a [Receipt Definition]({{ "/receipt_definitions.html" | relative_url }}) for use below.`
 
 ```text
 Receipts-Accepts: [definitions]

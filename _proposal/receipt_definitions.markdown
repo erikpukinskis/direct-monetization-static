@@ -80,10 +80,10 @@ A **Receipt Definition** is an XML object within the same namespace as a Menu XM
 | `none` | A `<definition><none></none></definition>` element indicates that while any of the other defined receipts would be _accepted_, no receipt is _required_. `none` has no children. |
 | `domain` | For an HTTPS resource, then this _must_ match the domain of the resource's address. |
 | `item` | This will typically be the path of the HTTP resource, but it could be anything. An _empty_ `item` tag indicates that any list of receipts matching the rest of the definition and totaling to the cost will suffice. |
-| `signer` | An absolute HTTPS url identifing a signatory. `TODO: The exact use of these urls will be pinned down as we figure out the details of the signing process.` Any one of the listed signatories is sufficient. |
+| `signer` | An absolute HTTPS url identifying a signatory. `TODO: The exact use of these urls will be pinned down as we figure out the details of the signing process.` Any one of the listed signatories is sufficient. |
 | `ttl` | An integer representing the maximum age in seconds of a Signed Receipt that will be accepted. Two independent conventions are recommended as "normal": The `ttl` should be 2720000, comfortably covering a month. The `ttl` should be the same for all items in a given domain. |
 | `fresh` | An integer representing the maximum age in seconds of a Receipt Submission. For now this is required to be 60. |
-| `cost` | If multiple costs are listed in a single definition, they should probably represent similar monitary values; `costs` is a list to accomidate multiple currencies. A `cost` tag will have either a `plan` child or a `units` and an `amount` child
+| `cost` | If multiple costs are listed in a single definition, they should probably represent similar monetary values; `costs` is a list to accommodate multiple currencies. A `cost` tag will have either a `plan` child or a `units` and an `amount` child
 | `units` | A currency code. [ISO4217](https://en.wikipedia.org/wiki/ISO_4217) codes are recommended. |
 | `amount` | A decimal number amount of that currency's major units. |
 | `plan` | An identifier which is assumed to mean something to the various parties involved.
