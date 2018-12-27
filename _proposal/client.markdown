@@ -6,4 +6,4 @@ description: The client's role
 documentation_order: 20
 ---
 
-st
+The **Client** is requesting a resource for which a receipt is required. They need to compose the Bare Receipt and communicate with the Notary to get it signed.
