@@ -29,7 +29,7 @@ We anticipate a distinction between the [Client]({{ "/client.html" | relative_ur
 ## Producer tools:
 Different [Hosts]({{ "/host.html" | relative_url }}) will have different needs. The textbook useage will be a server plugin, designated servlet, or specialized CDN, that will inspect requests for receipts, validate the receipts, and forward them to their respective Notaries for disbursement. 
 
-# Brokers and Networks:
+## Brokers and Networks:
 Throughout this standard we speak of a [Notary]({{ "/notary.html" | relative_url }}); the Notary's role is not just to sign receipts; they also handle the collection of money from consumers and disbursement of it to producers. In the typical case both the host and the client will have a prior relationship (memebership or account) set up with one or more Notary; as long as they have one in common the user experence can proceed seamlessly.
 
 ## Some early concerns:
