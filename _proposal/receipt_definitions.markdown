@@ -13,7 +13,7 @@ A **Receipt Definition** must make clear to a Client what receipts would be acce
 
 Figuring out what the Client will need to do in order for the chosen Notary to actually sign the receipt must be handled out-of-band; it's assumed that either the Client has prior contact with the Notary or human-user action will be required to complete the payment. (Specifically, the Client could redirect the user to the Notary's site to set up payment. This usually _should not_ happen automatically.)
 
-A **Receipt Definition** is an XML object within the same namespace as a Menu XML:
+A **Receipt Definition** is an XML object within the same name-space as a Menu XML:
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>

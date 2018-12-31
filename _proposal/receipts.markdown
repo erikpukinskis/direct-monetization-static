@@ -23,7 +23,7 @@ A Bare Receipt is a serialized object describing payment made for a particular i
 - A unix timestamp `time`, as an integer representing seconds.
 - A `unit` of currency. [ISO4217](https://en.wikipedia.org/wiki/ISO_4217) codes are recommended. 
 - An amount `amount` of that currency, as a decimal number in the currency's major units.
-- A namespace `domain`, typically a domain name, for the item being paid for.
+- A name-space `domain`, typically a domain name, for the item being paid for.
 - An `item` identifier, typically the URL path of the resource.
 - A `uuid` for the receipt itself. This may be used to prevent reuse of a receipt by multiple parties.
 - In the case that the user shouldn't have to pay for the resource because of some outside agreement, no `unit` or `amount` will be included. Instead a `plan` string specifying the agreement under which the notary determined that the user should have access will be included.

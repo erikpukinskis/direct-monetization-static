@@ -37,7 +37,7 @@ A menu.xml will be structured like so:
     ...
   </resources>
   <continued>
-    <menuurl>htps://www.example.com/menu2.xml</menuurl>
+    <menuurl>https://www.example.com/menu2.xml</menuurl>
     ...
   </continued>
 </menu>
@@ -45,14 +45,14 @@ A menu.xml will be structured like so:
 
 | Tag | Description |
 |---------|-------------|
-| `scope` | An absolute or relative address prefix, or an absolute address. Specifically, if the `scope` ends in a `/` then the the scope is understood to be that path (with or without the trailing `/`) and all its contents and subdirectories. The `scope` should not have a query-string or hash; even in the case of an absolute address all variations distinguished by query-strings or hashes are included in the one scope. |
+| `scope` | An absolute or relative address prefix, or an absolute address. Specifically, if the `scope` ends in a `/` then the the scope is understood to be that path (with or without the trailing `/`) and all its contents and sub-directories. The `scope` should not have a query-string or hash; even in the case of an absolute address all variations distinguished by query-strings or hashes are included in the one scope. |
 | `resource` | A resource (identified by the `loc` and `verbs`) for which receipts are required. All resources within the scope, _and all resources used by pages within the scope_, for which receipts are required or accepted, must be listed. |
 | `loc` | The absolute address of the resource for which a receipt is required in order to access. If there is not a query string in the `loc`, it's assumed that query strings will not identify a different resource or necessitate different receipts. Differentiating resources by hashes is not intelligible; hashes are not allowed in the `loc` |
 | `verbs` | Optional; if omitted it's assumed that the HTTP verb won't affect the resource or required receipts |
 | `verb` | An HTTP verb (technically, a [method](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)). |
 | `definitions` | The [Receipt Definition]({{ "/receipt_definitions.html" | relative_url }}) for the specified resource. |
 | `usedby` | Optional. A list of the `url`s of pages that use the resource. Paths will trailing `/`s will be treated as prefixes in the same was as in the `scope`. Query strings and hashes may be used and may use `*` characters as wildcards. That said, it's unclear how this would actually be used by the client. |
-| `continuted` | Optional. May be used to specify additional menus with the same scope, who's `resource` lists should be concatinated together. A single menue.xml may not contain more than 1,000 resources or exceed 1MB uncompressed |
+| `continuted` | Optional. May be used to specify additional menus with the same scope, who's `resource` lists should be concatenated together. A single menu.xml may not contain more than 1,000 resources or exceed 1MB uncompressed |
 
 A web-page **uses** a resource if a web browser rendering the page and executing any dynamic or interactive components would request that resource at any time prior to navigating away to a different page. If this is difficult to know in advance then it may be better to have a single menu.xml covering the entire website. 
 
@@ -70,7 +70,7 @@ Receipts-Menu: https://www.example.com/menu.xml
 It's perfectly intelligible for each page to have its own menu; in this situation the host is encourage to use [data URIs](https://en.wikipedia.org/wiki/Data_URI_scheme) instead of serving the menu separately.
 
 ## Response headers
-A resource that accepts receipts should say so, even when responding to a request that already included the needed receipt. The `Receipts-Accepts` response header value is a [compressed]({{ "/compression.html" | relative_url }}) [Receipt Definition]({{ "/receipt_definitions.html" | relative_url }}) XML object. The `"receipts:accepts"` meta tag is equivilant, but its content should not be compressed.
+A resource that accepts receipts should say so, even when responding to a request that already included the needed receipt. The `Receipts-Accepts` response header value is a [compressed]({{ "/compression.html" | relative_url }}) [Receipt Definition]({{ "/receipt_definitions.html" | relative_url }}) XML object. The `"receipts:accepts"` meta tag is equivalent, but its content should not be compressed.
 
 ```text
 Receipts-Accepts: [definitions]

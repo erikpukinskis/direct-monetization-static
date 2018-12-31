@@ -27,10 +27,10 @@ In practice, it is usually better to give  normal response to the principal requ
 We anticipate a distinction between the [Client]({{ "/client.html" | relative_url }}) (typically a web-browser, possibly with a plugin) and a remote [Wallet]({{ "/client.html" | relative_url }}) which will allow persistence of user-data between clients and devices.
 
 ## Producer tools:
-Different [Hosts]({{ "/host.html" | relative_url }}) will have different needs. The textbook useage will be a server plugin, designated servlet, or specialized CDN, that will inspect requests for receipts, validate the receipts, and forward them to their respective Notaries for disbursement. 
+Different [Hosts]({{ "/host.html" | relative_url }}) will have different needs. The textbook usage will be a server plugin, designated servlet, or specialized CDN, that will inspect requests for receipts, validate the receipts, and forward them to their respective Notaries for disbursement. 
 
 ## Brokers and Networks:
-Throughout this standard we speak of a [Notary]({{ "/notary.html" | relative_url }}); the Notary's role is not just to sign receipts; they also handle the collection of money from consumers and disbursement of it to producers. In the typical case both the host and the client will have a prior relationship (memebership or account) set up with one or more Notary; as long as they have one in common the user experence can proceed seamlessly.
+Throughout this standard we speak of a [Notary]({{ "/notary.html" | relative_url }}); the Notary's role is not just to sign receipts; they also handle the collection of money from consumers and disbursement of it to producers. In the typical case both the host and the client will have a prior relationship (membership or account) set up with one or more Notary; as long as they have one in common the user experience can proceed seamlessly.
 
 ## Some early concerns:
 - The duplication of HTTPS header specifications and in-line HTML feels weird, but is probably the way forward. In particular, in-line HTML is probably easier for most website authors to implement and HTTPS headers aren't accessible from JS, but HTTPS headers feel like they'll have better separation of concerns, work with images, and are probably friendlier for robots.
