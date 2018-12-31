@@ -2,7 +2,8 @@
 title: Compression
 date: 2018-12-31 15:44:00 Z
 permalink: "/compression.html"
-description: Conventions for compressing objects within the context of the 402-Receipts standard.
+description: Conventions for compressing objects within the context of the 402-Receipts
+  standard.
 documentation_order: 100
 ---
 
