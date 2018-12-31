@@ -12,6 +12,8 @@ Usually this is to reduce the likelyhood of problems with HTTPS Header size limi
 The data, as UTF-8 bytes, should be compressed in gzip format and then rendered as base64.
 
 - Is the above description sufficiently specific? Is "gzip" the correct term for the (language-nonspecific) function to use?
-- Should this compression be optional? After all, even an uncompressed [Receipt Definition]({{ "/receipt_definitions.html" | relative_url }}) will typically be less than 10KB. 
+- Should this compression be optional? After all, even an uncompressed [Receipt Definition]({{ "/receipt_definitions.html" | relative_url }}) will typically be less than 10KB. If we make it optional, do we need any kind of flag to denote compression?
 - If we really want to be parsimonious about bytes, the data objects themselves could be designed to be denser, or we could render the compressed message in base85. Probably neither of these are good ideas.
+
+The body of an HTTPS request or response may be compressed or not in the normal way. Because compression of the whole body is typical, compression of elements _within_ the body isn't recommended. (Would it be desireable with a data-URI? It's unclear.)
 
