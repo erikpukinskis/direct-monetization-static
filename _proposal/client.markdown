@@ -7,7 +7,7 @@ documentation_order: 20
 ---
 
 The **Client** is requesting a resource for which a receipt is required.  
-It needs to compose the [Bare Receipt]({{ "/receipt.html" | relative_url }}) and communicate with the [Notary]({{ "/notary.html" | relative_url }}) to get it signed.
+It needs to compose the [Bare Receipt]({{ "/receipts.html" | relative_url }}) and communicate with the [Notary]({{ "/notary.html" | relative_url }}) to get it signed.
 
 Loosely speaking, the Client will always be an HTTPS client; in general, a web browser being used by a human to view content. Existing web browsers don't have the behavior defined in this standard; browser plugins are an ideal intermediary. Javascript included on pages served may also be viable, although they will not be able to support the same privacy and trustworthyness guarentees.
 
