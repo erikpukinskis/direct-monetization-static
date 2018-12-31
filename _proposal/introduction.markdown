@@ -16,7 +16,7 @@ We propose a suite of HTTPS headers, HTML head elements, and surrounding utiliti
 
 By design, this standard covers use-cases in which a 402 response would never actually be sent. In particular, we anticipate a tip-jar configuration in which no payment is _required_ to access the resource, but a clear means of making optional payments is exposed to the client along with explicit expectations about what they _should_ pay. Throughout this document we will talk interchangeably about "requiring" or "accepting" receipts. The actual behavior gets specified in the Receipt Definition.
 
-Although this standard will focus on HTTPS exchanges; it's desirable that the framework of translate clearly to other internet communications. 
+Although this standard will focus on HTTPS exchanges; it's desirable that the framework translate clearly to other internet communications. 
 
 ## Context for a 402 response
 It's generally poor user experience to reject a web-page request outright. A 402 response to such a request may work if a suitable placeholder page is available and the client is trusted to handle the response appropriately.
