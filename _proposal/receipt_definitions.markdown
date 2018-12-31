@@ -6,12 +6,12 @@ description: The 402-Receipt Proposed standard.
 documentation_order: 5
 ---
 
-A **Receipt Definition** must make clear to a client what receipts would be accepted in order to access the relevant resource. In particular it contains
+A **Receipt Definition** must make clear to a Client what receipts would be accepted in order to access the relevant resource. In particular it contains
 
 - requirements for the receipt contents
-- specification about what 3rd-party signatories would be acceptable.
+- specification about what 3rd-party Notaries would be acceptable.
 
-Figuring out what the client will need to do in order for the chosen notary to actually sign the receipt must be handled out-of-band; it's assumed that either the client has prior contact with the notary or human-user action will be required to complete the payment. `TODO: maybe give an in-band fall-back method?`
+Figuring out what the Client will need to do in order for the chosen Notary to actually sign the receipt must be handled out-of-band; it's assumed that either the Client has prior contact with the Notary or human-user action will be required to complete the payment. (Specifically, the Client could redirect the user to the Notary's site to set up payment. This usually _should not_ happen automatically.)
 
 A **Receipt Definition** is an XML object within the same namespace as a Menu XML:
 
@@ -78,9 +78,9 @@ A **Receipt Definition** is an XML object within the same namespace as a Menu XM
 |---------|-------------|
 | `definition` | To access the resource, a receipt matching one of these descriptions is needed. A `definition` tag will either contain a single `none` tag, or all the other child tags. |
 | `none` | A `<definition><none></none></definition>` element indicates that while any of the other defined receipts would be _accepted_, no receipt is _required_. `none` has no children. |
-| `domain` | For an HTTPS resource, then this _must_ match the domain of the resource's address. |
+| `domain` | For an HTTPS resource, this _must_ match the domain of the resource's address. |
 | `item` | This will typically be the path of the HTTP resource, but it could be anything. An _empty_ `item` tag indicates that any list of receipts matching the rest of the definition and totaling to the cost will suffice. |
-| `signer` | An absolute HTTPS url identifying a notary. `TODO: The exact use of these urls will be pinned down as we figure out the details of the signing process.` Any one of the listed signatories is sufficient. |
+| `signer` | The absolute canonical HTTPS url identifying a Notary. Any one of the listed Notaries is sufficient. |
 | `ttl` | An integer representing the maximum age in seconds of a Signed Receipt that will be accepted. Two independent conventions are recommended as "normal": The `ttl` should be 2720000, comfortably covering a month. The `ttl` should be the same for all items in a given domain. |
 | `fresh` | An integer representing the maximum age in seconds of a Receipt Submission. For now this is required to be 60. |
 | `cost` | If multiple costs are listed in a single definition, they should probably represent similar monetary values; `costs` is a list to accommodate multiple currencies. A `cost` tag will have either a `plan` child or a `units` and an `amount` child
