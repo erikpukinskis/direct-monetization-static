@@ -12,5 +12,5 @@ Assuming we stick with a blind-signature scheme for [Receipts]({{ "/receipts.htm
 
 In practice, the Host should also be obliged to validate the receipt as part of request handling, and the Host **should not** forward the receipt until handling of the HTTPS request in question has finished. Submitting receipts to the Notary in batches (for example, every hour) can (in conjunction with some defensive behavior on the part of the Clients) prevent deanonymization of receipts by timing analysis. 
 
-Furthermore, the Host will need to maintain database of receipts it has recieved which would still be valid for use along with the Client Key they were originally submitted with. This is needed to prevent sharing of receipts between consumers. 
+Furthermore, the Host will need to maintain a database of receipts it has recieved which would still be valid for use along with the Client Key they were originally submitted with. This is needed to prevent sharing of receipts between consumers. 
 
