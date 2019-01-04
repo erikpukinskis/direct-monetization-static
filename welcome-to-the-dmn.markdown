@@ -33,7 +33,7 @@ Read [draft negative-one of the new web standard]({{"/introduction.html" | relat
   Full-stack suite of modular, open-source tools usable as SaaS and self-hosted components.
 
 ## How to help:
-This whole website, including the proposed standard, is on [GitHub](https://github.com/ShapeOfMatter/direct-monetization-static). Other avenues of feedback will be made available soon.
+This whole website, including the proposed standard, is on [GitHub](https://github.com/ShapeOfMatter/direct-monetization-static); pull requests are welcome. You can also email us with questions or suggestions at <dmn@directmonetization.network>.
 
 ## DMN and the 402-Receipts standard
 The proposed [402-Receipts standard]({{"/introduction.html" | relative_url}}) will be an open community-consensus standard. It will move to its own website as soon as the name is settled.  
