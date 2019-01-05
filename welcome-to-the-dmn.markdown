@@ -10,9 +10,11 @@ description: The Direct Monetization Network will be a full-stack suite of tools
 
 -------------------------------------------
 
-The Direct Monetization Network (DMN) will be a full-stack suite of tools for creators and their audiences, implementing a 402-based internet payment scheme. 
+The Direct Monetization Network (DMN) will be a full-stack suite of tools for creators and their audiences, implementing a 402-based internet payment scheme.
 
-Read [draft negative-one of the new web standard]({{"/introduction.html" | relative_url}}) we'll be implementing.
+We will develope open source tools for use with the 402-Receipts protocol, and offer support for and SaaS versions of those tools. 
+
+**The proposed [402-Receipts standard]({{"/introduction.html" | relative_url}}) will be an open standard.** It will move to its own website as soon as the name is settled. We are seeking feedback from the public and prospective users.
 
 ## How will I use this?
 **Here's what it's like for a customer:** You sign up for a managed account, or host your own wallet and give it access to your DMN account. As you browse the web your account is charged for pages you visit. Your wallet protects you from unexpected charges and abuse. The Network blocks payments to fraudulent websites. The underlying protocol makes it possible for this to happen without the websites knowing who you are and without the Network knowing what websites you visit.
@@ -33,8 +35,6 @@ Read [draft negative-one of the new web standard]({{"/introduction.html" | relat
   Full-stack suite of modular, open-source tools usable as SaaS and self-hosted components.
 
 ## How to help:
-This whole website, including the proposed standard, is on [GitHub](https://github.com/ShapeOfMatter/direct-monetization-static); pull requests are welcome. You can also email us with questions or suggestions at <dmn@directmonetization.network>.
+This website, including the proposed standard, is on [GitHub](https://github.com/ShapeOfMatter/direct-monetization-static); pull requests are welcome. You can also email us with questions or suggestions at <dmn@directmonetization.network>.
 
-## DMN and the 402-Receipts standard
-The proposed [402-Receipts standard]({{"/introduction.html" | relative_url}}) will be an open community-consensus standard. It will move to its own website as soon as the name is settled.  
-DMN will be developing open source tools for use with the 402-Receipts protocol, and offering support for and SaaS versions of those tools. 
+
