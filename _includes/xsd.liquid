@@ -1,0 +1,23 @@
+{% assign self = "xsd.liquid" %}{% case include.obj.obj_name %}
+  {% when 'schema' %}<?xml version="1.0"?>
+    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+               targetNamespace="{{ include.obj.namespace }}"
+               xmlns="https://www.w3schools.com"
+               elementFormDefault="{% unless include.obj.unqualified %}qualified{% else %}unqualified{% endunless %}">
+      {% for child in include.obj.children %}
+        {% include_relative {{ self }} obj=child %}
+      {% endfor %}
+    </xs:schema>
+  {% when 'element' %}
+    <xs:element name="{{ include.obj.name }}"
+                type="{% case include.obj.type %}{% when 'integer' %}xs:integer{% else %}xs:string{% endcase %}"
+                {% if include.obj.default %}{% if include.obj.fixed %}fixed{% else %}default{% endif %}="{{ include.obj.default }}"{% endif %}/>
+  {% when 'attribute' %}
+    <xs:attribute name="{{ include.obj.name }}"
+                  type="{% case include.obj.type %}{% when 'integer' %}xs:integer{% else %}xs:string{% endcase %}"
+                  {% if include.obj.default %}{% if include.obj.fixed %}fixed{% else %}default{% endif %}="{{ include.obj.default }}"{% endif %}
+                  {% if include.obj.required %}use="required"{% endif %}/>
+  {% else %}
+    Thank you for your order!
+  {% endcase %}
+
