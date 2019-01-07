@@ -3,6 +3,6 @@
 <{% if include.obj.namespace %}{{ include.obj.namespace }}:{% endif %}{{ include.obj.name }}
 {% for ns in include.obj.xmlns %}xmlns{% if ns.prefix %}{{ ns.prefix }}:{% endif %}="{{ ns.uri }}"{% endfor %}
 {% for attribute in include.obj.attributes %}{% if attribute.namespace %}{{ attribute.namespace }}:{% endif %}{{ attribute.name }}="{ attribute.value }}"{% endfor %}>
-{% for child in include.obj.children %}{% include_relative {{ self }} obj=child %}{% endfor %}
-</n {% if include.obj.namespace %}{{ include.obj.namespace }}:{% endif %}{{ include.obj.name }}>
+{% for child in include.obj.children %}{% include {{ self }} obj=child %}{% endfor %}
+</{% if include.obj.namespace %}{{ include.obj.namespace }}:{% endif %}{{ include.obj.name }}>
 
