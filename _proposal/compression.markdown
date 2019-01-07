@@ -5,22 +5,34 @@ permalink: "/compression.html"
 description: Conventions for compressing objects within the context of the 402-Receipts
   standard.
 documentation_order: 100
-xml: root: true
-     namespace: "hella"
-     name: "root"
-     xmlns: - prefix: "p"
-              uri: "xkcd.com"
-     attributes: - namespace: "hella"
-                   name: "a"
-                   value: "v"
-                 - name: "b"
-                   value: "asdf"
-     children: - name: "asdfasdf"
-               - name: "asdfasdfasdf"
-                 attributes: - name: "inner"
-                               value: "inner"
-                             - name: "still_inner"
-                               value: "what do you think?"
+xml: 
+  attributes: 
+    - 
+      name: a
+      namespace: hella
+      value: v
+    - 
+      name: b
+      value: asdf
+  children: 
+    - 
+      name: asdfasdf
+    - 
+      attributes: 
+        - 
+          name: inner
+          value: inner
+        - 
+          name: still_inner
+          value: "what do you think?"
+      name: asdfasdfasdf
+  name: root
+  namespace: hella
+  root: true
+  xmlns: 
+    - 
+      prefix: p
+      uri: xkcd.com
 ---
 
 There are a few places throughout the standard, particularly in HTTPS Headers, where compression is required.  
