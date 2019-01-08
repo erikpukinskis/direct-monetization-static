@@ -1,7 +1,7 @@
 {% assign self = "liquid_data.xml" %}{% assign s = " " %}{% if include.obj.root %}<?xml version="1.0"?>
-{% endif %}<{% capture obj_name %}{% if include.obj.namespace %}{{ include.obj.namespace }}:{% endif %}{{ include.obj.name }}{% unless 0 == include.obj.xmlns.size and 0 == include.obj.attributes.size %}{{ s }}{% endunless %}{% endcapture %}{{ obj_name }}{% for ns in include.obj.xmlns %}{% unless forloop.first %}
-{% for space in (1..obj_name.size) %}{{ s }}{% endfor %}{% endunless %}xmlns{% if ns.prefix %}:{{ ns.prefix }}{% endif %}="{{ ns.uri }}"{% endfor %}{% for attribute in include.obj.attributes %}{% unless forloop.first and 0 == include.obj.xmlns.size %}
-{% for space in (1..obj_name.size) %}{{ s }}{% endfor %}{% endunless %}{% if attribute.namespace %}{{ attribute.namespace }}:{% endif %}{{ attribute.name }}="{{ attribute.value }}"{% endfor %}>{% for child in include.obj.children %}
+{% endif %}<{% capture obj_name %}{% if include.obj.namespace %}{{ include.obj.namespace }}:{% endif %}{{ include.obj.name }}{% unless '' == include.obj.xmlns and '' == include.obj.attributes %}{{ s }}{% endunless %}{% endcapture %}{{ obj_name }}{% for ns in include.obj.xmlns %}{% unless forloop.first %}
+{% for space in (0..obj_name.size) %}{{ s }}{% endfor %}{% endunless %}xmlns{% if ns.prefix %}:{{ ns.prefix }}{% endif %}="{{ ns.uri }}"{% endfor %}{% for attribute in include.obj.attributes %}{% unless forloop.first and 0 == include.obj.xmlns.size %}
+{% for space in (0..obj_name.size) %}{{ s }}{% endfor %}{% endunless %}{% if attribute.namespace %}{{ attribute.namespace }}:{% endif %}{{ attribute.name }}="{{ attribute.value }}"{% endfor %}>{% for child in include.obj.children %}
   {% capture child_lines %}{% include {{ self }} obj=child %}{% endcapture %}{{ child_lines | strip | replace: "
 ", "
   " }}{% endfor %}
