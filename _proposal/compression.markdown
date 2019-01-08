@@ -39,9 +39,6 @@ The data, as UTF-8 bytes, should be compressed in gzip format and then rendered 
 
 The body of an HTTPS request or response may be compressed or not in the normal way. Because compression of the whole body is typical, compression of elements _within_ the body isn't recommended. (Would it be desirable with a data-URI? It's unclear.)
 
-'''xml
+```xml
 {% include liquid_data.xml obj=page.xml %}
-'''
-{% assign newline="
-" %}a{{ newline }}b{{ newline }}{{ newline }}c{{ newline }}{{ newline }}{{ newline }}d
-
+```
