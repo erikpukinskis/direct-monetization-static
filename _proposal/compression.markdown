@@ -42,4 +42,6 @@ The body of an HTTPS request or response may be compressed or not in the normal 
 '''xml
 {% include liquid_data.xml obj=page.xml %}
 '''
+{% assign newline="
+" %}a{{ newline }}b{{ newline }}{{ newline }}c{{ newline }}{{ newline }}{{ newline }}d
 
