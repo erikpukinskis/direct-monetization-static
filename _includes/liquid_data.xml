@@ -1,8 +1,9 @@
 {% assign self = "liquid_data.xml" %}{% if include.obj.root %}<?xml version="1.0"?>
-{% endif %}
-<{% if include.obj.namespace %}{{ include.obj.namespace }}:{% endif %}{{ include.obj.name }}
-{% for ns in include.obj.xmlns %}xmlns{% if ns.prefix %}{{ ns.prefix }}:{% endif %}="{{ ns.uri }}"{% endfor %}
-{% for attribute in include.obj.attributes %}{% if attribute.namespace %}{{ attribute.namespace }}:{% endif %}{{ attribute.name }}="{ attribute.value }}"{% endfor %}>
-{% for child in include.obj.children %}{% include {{ self }} obj=child %}{% endfor %}
+{% endif %}<{% capture obj_name %}{% if include.obj.namespace %}{{ include.obj.namespace }}:{% endif %}{{ include.obj.name }}{% endcapture %}{{ obj_name }}{% for ns in include.obj.xmlns %}{% unless forloop.first %}
+{% for space in (1..obj_name.size) %} {% endfor %}{% endunless %}xmlns{% if ns.prefix %}:{{ ns.prefix }}{% endif %}="{{ ns.uri }}"{% endfor %}{% for attribute in include.obj.attributes %}{% unless forloop.first and 0 == include.obj.xmlns.size %}
+{% for space in (1..obj_name.size) %} {% endfor %}{% endunless %}{% if attribute.namespace %}{{ attribute.namespace }}:{% endif %}{{ attribute.name }}="{ attribute.value }}"{% endfor %}>{% for child in include.obj.children %}
+  {% capture child_lines %}{% include {{ self }} obj=child %}{% endcapture %}{{ child_lines | replace: "
+", "
+  " }}{% endfor %}
 </{% if include.obj.namespace %}{{ include.obj.namespace }}:{% endif %}{{ include.obj.name }}>
 
