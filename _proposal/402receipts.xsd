@@ -5,4 +5,5 @@ permalink: "/402receipts.xsd"
 description: The XML Schema Document for 402-Receipts
 documentation_order: 1000
 ---
+
 {% include xsd.liquid xsd=site.data.402_receipts_xsd %}
