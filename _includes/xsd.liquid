@@ -1,23 +1,48 @@
-{% assign self = "xsd.liquid" %}{% case include.obj.obj_name %}
-  {% when 'schema' %}<?xml version="1.0"?>
-    <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-               targetNamespace="{{ include.obj.namespace }}"
-               xmlns="https://www.w3schools.com"
-               elementFormDefault="{% unless include.obj.unqualified %}qualified{% else %}unqualified{% endunless %}">
-      {% for child in include.obj.children %}
-        {% include_relative {{ self }} obj=child %}
-      {% endfor %}
-    </xs:schema>
-  {% when 'element' %}
-    <xs:element name="{{ include.obj.name }}"
-                type="{% case include.obj.type %}{% when 'integer' %}xs:integer{% else %}xs:string{% endcase %}"
-                {% if include.obj.default %}{% if include.obj.fixed %}fixed{% else %}default{% endif %}="{{ include.obj.default }}"{% endif %}/>
-  {% when 'attribute' %}
-    <xs:attribute name="{{ include.obj.name }}"
-                  type="{% case include.obj.type %}{% when 'integer' %}xs:integer{% else %}xs:string{% endcase %}"
-                  {% if include.obj.default %}{% if include.obj.fixed %}fixed{% else %}default{% endif %}="{{ include.obj.default }}"{% endif %}
-                  {% if include.obj.required %}use="required"{% endif %}/>
-  {% else %}
-    Thank you for your order!
-  {% endcase %}
+<?xml version="1.0"?>{% assign cr = "
+" %}
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="{{ include.namespace }}"
+           xmlns="https://www.w3schools.com"
+          elementFormDefault="{% unless include.unqualified %}qualified{% else %}unqualified{% endunless %}">
+  <xs:annotation>
+    <xs:documentation>
+      {{ include.documentation | strip | replace: cr, "
+      " }}
+    </xs:documentation>
+  </xs:annotation>
+  {% for element in include.root_elements %}
+  <xs:element name="{{ element.name }}" type="{% if element.type %}{{ element.type }}{% else %}{{ element.name }}{% endif %}">
+    <xs:annotation>
+      <xs:documentation>
+        {{ element.documentation | strip | replace: cr, "
+        " }}
+      </xs:documentation>
+    </xs:annotation>
+  </xs:element>
+  {% endfor %}
+  {% for type in include.types %}
+  <xs:{{type.complexity}} name="{{ type.name }}">
+    <xs:annotation>
+      <xs:documentation>
+        {{ type.documentation | strip | replace: cr, "
+        " }}
+      </xs:documentation>
+    </xs:annotation>{% if type.children[1] %}
+    <xs:choice>{% for group in type.children %}
+      <xs:all>{% for child in group %}
+        <xs:element name="{{ child.name }}" type="{% if child.type %}{{ child.type }}{% else %}{{ child.name }}{% endif %}"{% if child.optional %} minOccurs="0"{% endif %}/>{% endfor %}
+      </xs:all>{% endfor %}
+    </xs:choice>{% elsif type.children %}
+    <xs:all>{% for child in type.children[0] %}
+      <xs:element name="{{ child.name }}" type="{% if child.type %}{{ child.type }}{% else %}{{ child.name }}{% endif %}"{% if child.optional %} minOccurs="0"{% endif %}/>{% endfor %}
+    </xs:all>{% elsif type.list %}
+    <xs:sequence>
+	  <xs:element name="{{ type.list.name }}" type="{% if type.list.type %}{{ type.list.type }}{% else %}{{ type.list.name }}{% endif %}"{% if child.optional %} minOccurs="0"{% endif %} maxOccurs="unbounded"/>{% endfor %}
+    </xs:sequence>{% else %}
+    <xsd:restriction base="xsd:{{ type.base }}">{% for restriction in type.restrictions %}
+      <xsd:{{ restriction.kind }} value="{{ restriction.value }}"/>{% endfor %}
+    </xsd:restriction>{% endif %}
+  </xs:{{ type.complexity }}>
+  {% endfor %}
+</xs:schema>
 

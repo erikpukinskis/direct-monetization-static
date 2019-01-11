@@ -1,0 +1,70 @@
+xsd:
+  namespace: 'https://TODO.todo'
+  documentation: XML Schema for menu.xml files and for Receipt Definition XML objects.
+  root_elements:
+  - name: menu
+    documentation: The root element of a menu.xml file.
+  - name: definitions
+    documentation: 'The root element of a Receipt Defintion xml fragment. Also a child of a `<resource>` within a menu.xml file.'
+  types:
+  - name: menu
+    complexity: complexType
+    documentation: 'A menu of resources within a given scope for which receipts are required or accepted.'
+    children:
+    -
+      - name: scope
+      - name: resources
+      - name: continued
+        optional: true
+  - name: scope
+    complexity: simpleType
+    base: anyURI
+    documentation: 'An absolute address or address prefix. Specifically, if the `scope` ends in a `/` then the the scope is understood to be that path (with or without the trailing `/`) and all its contents and sub-directories. The `scope` should not have a query-string or hash; all variations distinguished by query-strings or hashes are included in the one scope.'
+  - name: resources
+    complexity: complexType
+    documentation: 'All resources within the scope, _and all resources used by pages within the scope_, for which receipts are required or accepted, must be listed.'
+    list:
+      name: resource
+  - name: resource
+    complexity: complexType
+    documentation: 'A resource (identified by the `loc` and `verbs`) for which receipts are required.'
+    children:
+    - 
+      - name: loc
+      - name: verbs
+        optional: true
+      - name: definitions
+      - name: usedby
+        optional: true
+  - name: loc
+    complexity: simpleType
+    base: anyURI
+    documentation: 'The absolute address of the resource for which a receipt is required in order to access. If there is not a query string in the `loc`, it's assumed that query strings will not identify a different resource or necessitate different receipts. Differentiating resources by hashes is not intelligible; hashes are not allowed in the `loc`.'
+  - name: verbs
+    complexity: complexType
+    documentation: 'If this is omitted it's assumed that the HTTP verb won't affect the resource or required receipts.'
+    list: 
+      name: verb
+  - name: verb
+    complexity: simpleType
+    base: string
+    documentation: 'An HTTP verb (technically, a [method](https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol#Request_methods)).'
+  - name: usedby
+    complexity: complexType
+    documentation: 'A list of the `url`s of pages that use the resource.'
+    list: 
+      name: url
+  - name: url
+    complexity: simpleType
+    base: anyURI
+    documentation: 'Paths with trailing `/`s will be treated as prefixes in the same was as in the `scope`. Query strings and hashes may be used and may use `*` characters as wildcards. That said, it's unclear how this would actually be used by the client.'
+  - name: continued
+    complexity: complexType
+    documentation: 'May be used to specify additional menus with the same scope, who's `resource` lists should be concatenated together.'
+    list: 
+      name: menuurl
+  - name: menuurl
+    complexity: simpleType
+    base: anyURI
+    documentation: 'A single menu.xml may not contain more than 1,000 resources or exceed 1MB uncompressed.'
+
