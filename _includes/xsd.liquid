@@ -37,7 +37,7 @@
       <xs:element name="{{ child.name }}" type="{% if child.type %}{{ child.type }}{% else %}{{ child.name }}{% endif %}"{% if child.optional %} minOccurs="0"{% endif %}/>{% endfor %}
     </xs:all>{% elsif type.list %}
     <xs:sequence>
-	  <xs:element name="{{ type.list.name }}" type="{% if type.list.type %}{{ type.list.type }}{% else %}{{ type.list.name }}{% endif %}"{% if child.optional %} minOccurs="0"{% endif %} maxOccurs="unbounded"/>{% endfor %}
+      <xs:element name="{{ type.list.name }}" type="{% if type.list.type %}{{ type.list.type }}{% else %}{{ type.list.name }}{% endif %}"{% if child.optional %} minOccurs="0"{% endif %} maxOccurs="unbounded"/>
     </xs:sequence>{% else %}
     <xsd:restriction base="xsd:{{ type.base }}">{% for restriction in type.restrictions %}
       <xsd:{{ restriction.kind }} value="{{ restriction.value }}"/>{% endfor %}
