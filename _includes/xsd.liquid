@@ -1,16 +1,16 @@
 <?xml version="1.0"?>{% assign cr = "
 " %}
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="{{ include.namespace }}"
+           targetNamespace="{{ include.xsd.namespace }}"
            xmlns="https://www.w3schools.com"
-          elementFormDefault="{% unless include.unqualified %}qualified{% else %}unqualified{% endunless %}">
+          elementFormDefault="{% unless include.xsd.unqualified %}qualified{% else %}unqualified{% endunless %}">
   <xs:annotation>
     <xs:documentation>
-      {{ include.documentation | strip | replace: cr, "
+      {{ include.xsd.documentation | strip | replace: cr, "
       " }}
     </xs:documentation>
   </xs:annotation>
-  {% for element in include.root_elements %}
+  {% for element in include.xsd.root_elements %}
   <xs:element name="{{ element.name }}" type="{% if element.type %}{{ element.type }}{% else %}{{ element.name }}{% endif %}">
     <xs:annotation>
       <xs:documentation>
@@ -20,7 +20,7 @@
     </xs:annotation>
   </xs:element>
   {% endfor %}
-  {% for type in include.types %}
+  {% for type in include.xsd.types %}
   <xs:{{type.complexity}} name="{{ type.name }}">
     <xs:annotation>
       <xs:documentation>
