@@ -1,9 +1,1 @@
-<?xml version="1.0"?>
-
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-           targetNamespace="TODO"
-           xmlns="https://www.w3schools.com"
-           elementFormDefault="qualified">
-  <xs:element name="scope" type="yyy"/>
-</xs:schema>
-
+{% include xsd.liquid xsd=site.data.402_receipts_xsd %}
