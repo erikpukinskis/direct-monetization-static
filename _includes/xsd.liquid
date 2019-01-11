@@ -2,7 +2,7 @@
 " %}
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
            targetNamespace="{{ include.xsd.namespace }}"
-           xmlns="https://www.w3schools.com"
+           xmlns="{{ include.xsd.namespace }}"
           elementFormDefault="{% unless include.xsd.unqualified %}qualified{% else %}unqualified{% endunless %}">
   <xs:annotation>
     <xs:documentation>
