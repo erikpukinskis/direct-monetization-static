@@ -9,8 +9,7 @@
       {{ include.xsd.documentation | strip | replace: cr, "
       " | xml_escape }}
     </xs:documentation>
-  </xs:annotation>
-  {% for element in include.xsd.root_elements %}
+  </xs:annotation>{% for element in include.xsd.root_elements %}
   <xs:element name="{{ element.name }}" type="{% if element.type %}{{ element.type }}{% else %}{{ element.name }}{% endif %}">
     <xs:annotation>
       <xs:documentation>
@@ -18,10 +17,8 @@
         " | xml_escape }}
       </xs:documentation>
     </xs:annotation>
-  </xs:element>
-  {% endfor %}
-  {% for type in include.xsd.types %}
-  <xs:{{type.complexity}} name="{{ type.name }}">
+  </xs:element>{% endfor %}{% for type in include.xsd.types %}
+  <xs:{% if type.base %}simpleType{% else %}complexType{% endif %} name="{{ type.name }}">
     <xs:annotation>
       <xs:documentation>
         {{ type.documentation | strip | replace: cr, "
@@ -42,7 +39,7 @@
     <xs:restriction base="xs:{{ type.base }}">{% for restriction in type.restrictions %}
       <xs:{{ restriction.kind }} value="{{ restriction.value }}"/>{% endfor %}
     </xs:restriction>{% endif %}
-  </xs:{{ type.complexity }}>
+  </xs:{% if type.base %}simpleType{% else %}complexType{% endif %}>
   {% endfor %}
 </xs:schema>
 
