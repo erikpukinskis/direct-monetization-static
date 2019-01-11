@@ -5,27 +5,6 @@ permalink: "/compression.html"
 description: Conventions for compressing objects within the context of the 402-Receipts
   standard.
 documentation_order: 100
-xml:
-  attributes:
-  - name: a
-    namespace: hella
-    value: v
-  - name: b
-    value: asdf
-  children:
-  - name: asdfasdf
-  - attributes:
-    - name: inner
-      value: inner
-    - name: still_inner
-      value: what do you think?
-    name: asdfasdfasdf
-  name: root
-  namespace: hella
-  root: true
-  xmlns:
-  - prefix: p
-    uri: xkcd.com
 ---
 
 There are a few places throughout the standard, particularly in HTTPS Headers, where compression is required.  
@@ -39,6 +18,3 @@ The data, as UTF-8 bytes, should be compressed in gzip format and then rendered 
 
 The body of an HTTPS request or response may be compressed or not in the normal way. Because compression of the whole body is typical, compression of elements _within_ the body isn't recommended. (Would it be desirable with a data-URI? It's unclear.)
 
-```xml
-{% include xsd.liquid xsd=site.data.402_receipts_xsd.xsd %}
-```
