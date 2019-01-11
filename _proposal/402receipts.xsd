@@ -1,1 +1,3 @@
+---
+---
 {% include xsd.liquid xsd=site.data.402_receipts_xsd %}
