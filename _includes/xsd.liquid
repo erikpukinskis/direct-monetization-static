@@ -7,7 +7,7 @@
   <xs:annotation>
     <xs:documentation>
       {{ include.xsd.documentation | strip | replace: cr, "
-      " }}
+      " | xml_escape }}
     </xs:documentation>
   </xs:annotation>
   {% for element in include.xsd.root_elements %}
@@ -15,7 +15,7 @@
     <xs:annotation>
       <xs:documentation>
         {{ element.documentation | strip | replace: cr, "
-        " }}
+        " | xml_escape }}
       </xs:documentation>
     </xs:annotation>
   </xs:element>
@@ -25,7 +25,7 @@
     <xs:annotation>
       <xs:documentation>
         {{ type.documentation | strip | replace: cr, "
-        " }}
+        " | xml_escape }}
       </xs:documentation>
     </xs:annotation>{% if type.children[1] %}
     <xs:choice>{% for group in type.children %}
@@ -39,9 +39,9 @@
     <xs:sequence>
       <xs:element name="{{ type.list.name }}" type="{% if type.list.type %}{{ type.list.type }}{% else %}{{ type.list.name }}{% endif %}"{% if child.optional %} minOccurs="0"{% endif %} maxOccurs="unbounded"/>
     </xs:sequence>{% else %}
-    <xsd:restriction base="xsd:{{ type.base }}">{% for restriction in type.restrictions %}
-      <xsd:{{ restriction.kind }} value="{{ restriction.value }}"/>{% endfor %}
-    </xsd:restriction>{% endif %}
+    <xs:restriction base="xs:{{ type.base }}">{% for restriction in type.restrictions %}
+      <xs:{{ restriction.kind }} value="{{ restriction.value }}"/>{% endfor %}
+    </xs:restriction>{% endif %}
   </xs:{{ type.complexity }}>
   {% endfor %}
 </xs:schema>
