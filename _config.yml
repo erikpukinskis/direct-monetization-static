@@ -30,6 +30,9 @@ defaults:
   values:
     layout: documentation
 permalink: pretty
+markdown: kramdown
+kramdown:
+  parse_block_html: true
 site_colors:
   primary_background: "#FFFFFF"
   light_background: "#DDDDDD"
@@ -38,4 +41,3 @@ site_colors:
   secondary_font: "#333333"
   tertiary_font: "#CCCCCC"
 cachebuster: 6
-markdown: kramdown
