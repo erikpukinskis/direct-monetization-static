@@ -30,6 +30,9 @@ defaults:
   values:
     layout: documentation
 permalink: pretty
+markdown: kramdown
+kramdown:
+  parse_block_html: true
 site_colors:
   primary_background: "#FFFFFF"
   light_background: "#DDDDDD"
