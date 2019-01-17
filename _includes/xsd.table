@@ -1,0 +1,49 @@
+<table>
+  <caption>XML Schema Documentation for the {{ include.xsd.namespace }}.</caption>
+  <thead><tr><td>{{ include.xsd.documentation }}</td></tr></thead>
+  <thead>
+    <tr>
+      <th>Tag</th>
+      <th>Description</th>
+      <th>Children/_Type_</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Root elements:</th>
+    </tr>
+    {% for element in include.xsd.root_elements %}<tr>
+      <td>`{{ element.name }}`</td>
+      <td>{{ element.documentation }}</td>
+      <td>_see below_</td>
+    </tr>{% endfor %}
+  </tbody>
+  <tbody>
+    <tr>
+      <th>Element types:</th>
+    </tr>
+    {% for type in include.xsd.types %}<tr>
+      <td>`{{ type.name }}`</td>
+      <td>{{ type.documentation }}</td>
+      <td>
+        {% if type.children[1] %}
+          {% for group in type.children %}
+            {% for child in group %}
+              - _{{ child.name }}{% if child.type %} ({{ child.type }}){% endif %}{% if child.optional %} [optional]{% endif %}_
+            {% endfor %}
+            {% unless if forloop.last %}**OR**{% endif %}
+          {% endfor %}
+        {% elsif type.list %}
+          _List of `{{ type.list.name }}`{% if child.type %} ({{ type.list.type }}){% endif %}_
+        {% else %}
+          _{{ type.base }}_
+          {% for restriction in type.restrictions %}
+            - {{ restriction.kind }}: {{ restriction.value }}
+          {% endfor %}
+        {% endif %}
+      </td>
+    </tr>{% endfor %}
+  </tbody>
+</table>
+
+

@@ -1,10 +1,14 @@
 ---
-title: Receipt Definitions
-date: 2018-12-06 12:00:00 Z
-permalink: "/receipt_definitions.html"
-description: The 402-Receipt Proposed standard.
-documentation_order: 5
+title: XML Definitions
+date: 2019-01-012 12:00:00 Z
+permalink: "/xml.html"
+description: XML Schema documentation 402-Receipt Proposed standard.
+documentation_order: 3
 ---
+
+
+
+
 
 A **Receipt Definition** must make clear to a Client what receipts would be accepted in order to access the relevant resource. In particular it contains
 
