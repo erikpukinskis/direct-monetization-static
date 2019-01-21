@@ -1,6 +1,6 @@
 ---
 title: XML Definitions
-date: 2019-01-012 12:00:00 Z
+date: 2019-01-12 12:00:00 Z
 permalink: "/xml.html"
 description: XML schema documentation for the 402-Receipt Proposed standard.
 documentation_order: 6
