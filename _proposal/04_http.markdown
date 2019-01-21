@@ -13,7 +13,7 @@ Additionally, the meaning of relevant HTTP Response codes is explained.
 
 **All requests and responses involved in this standard should be made of HTTPS connections with valid certificates.** Implementations are not obliged to accept receipts or other information transmitted over HTTP.
 
-A `Receipts-Menu` Header advertises a {% include link s=site.data.glossary.menu_xml % }to the Client.
+A `Receipts-Menu` Header advertises a {% include link s=site.data.glossary.menu_xml %} to the Client.
 
 {% include glossary_item s=site.data.glossary.menu_header %}
 
