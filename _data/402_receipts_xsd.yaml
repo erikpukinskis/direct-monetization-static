@@ -87,7 +87,7 @@ types:
 - name: signer
   documentation: "The absolute canonical HTTPS url identifying a Notary. Any one of the listed Notaries is sufficient."
 - name: ttl
-  documentation: "An integer representing the maximum age in seconds of a Signed Receipt that will be accepted. Two independent conventions are recommended as "normal": The `ttl` should be 2720000, comfortably covering a month. The `ttl` should be the same for all items in a given domain."
+  documentation: 'An integer representing the maximum age in seconds of a Signed Receipt that will be accepted. Two independent conventions are recommended as "normal": The `ttl` should be 2720000, comfortably covering a month. The `ttl` should be the same for all items in a given domain.'
   base: unsignedInt
 - name: fresh
   documentation: "An integer representing the maximum age in seconds of a Receipt Submission. For now this is required to be 60."
