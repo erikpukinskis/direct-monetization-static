@@ -58,7 +58,7 @@ types:
   documentation: "A list of `definition`s. May be a child of a `resource`, or may be the root of an xml fragment in a `Receipts-Accepts` header."
   list: 
     name: definition
-- name:definition
+- name: definition
   documentation: "To access the resource, a receipt matching one of these descriptions is needed. A `definition` tag will either contain a single `none` tag, or all the other child tags."
   children:
   - - name: none
