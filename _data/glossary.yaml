@@ -12,7 +12,7 @@ menu_xml:
 menu_header:
   subject: Receipts-Menu Header
   path: /http.html#glossary_menu_header
-  meaning: |4
+  meaning: |
     A `Receipts-Menu` header should be included with any page that uses resources for which receipts will be required,
     so that the Client will know what Receipts to get _before_ requesting those resources.
     A menu header will contain a single absolute url to a {% include link s=site.data.glossary.menu_xml %} which contain the current page or resource in its scope.
@@ -30,7 +30,7 @@ menu_header:
 accepts_header:
   subject: Receipts-Accepts Header
   path: /http.html#glossary_accepts_header
-  meaning: |4
+  meaning: |
     The `Receipts-Accepts` response header value is a [compressed]({{ "/compression.html" | absolute_url }}) {% include link s=site.data.glossary.receipt_definition %} XML object.
     The response to a request for a resource for which receipts are accepted must always have a `Receipts-Accepts` header
     if the response represents success (a 2** response) or any receipt- or payment-related failure (including a 402 response).
@@ -38,7 +38,7 @@ accepts_header:
 receipt_definition:
   subject: Receipt Definition
   path: /xml.html#glossary_receipt_definition
-  meaning: |4
+  meaning: |
     A Receipt Definition is an XML object which tells a Client what receipts would be accepted in order to access the relevant resource.
     Receipt Definitions are both the values of the {% include link s=site.data.glossary.accepts_header %}s
     and are part of {% include link s=site.data.glossary.menu_xml %} objects.
@@ -48,7 +48,7 @@ receipt_definition:
 cannonical_url:
   subject: Cannonical URL
   path: /parties.html#glossary_cannonical_url
-  meaning: |4
+  meaning: |
     A Notary is required to expose a canonical URL endpoint by which they can be identified, and which is _sufficient_ to interact with that Notary.
     
     - A GET request to the canonical URL should return an HTML page which a human could use to complete a purchase and obtain a receipt.
@@ -61,14 +61,14 @@ cannonical_url:
 receipt_header:
   subject: Receipts-Receipt Header
   path: /http.html#glossary_receipt_header
-  meaning: |4
+  meaning: |
     The `Receipts-Receipt` HTTP Request header will contain a compressed Receipt submission object.
     See the [Receipts]({{ "/receipts.html" | absolute_url }}) page for a more detailed explaination of the contents of a Receipt
     and an ongoing discussion of how it will be signed and its textual representation.
 402_response:
   subject: '402 Response Code'
   path: /http.html#glossary_402_response
-  meaning: |4
+  meaning: |
     A 402 HTTP response indicates that the request should/may be retried with a receipt as described in the `Receipts-Accepts` header.
     To the extent possible, 402 should be the “rejection of last resort” in the sense that a 402 response should not be given
     if the request would have failed for other reasons in addition to the absence of a suitable `Receipts-Receipt` header.
