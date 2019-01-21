@@ -22,7 +22,7 @@
     <tr>
       <th>Element types:</th>
     </tr>
-    {% for type in include.xsd.types %}<tr>
+    {% for type in include.xsd.types %}<tr id="xsd_row_{{ type.name }}">
       <td>`{{ type.name }}`</td>
       <td>{{ type.documentation }}</td>
       <td>

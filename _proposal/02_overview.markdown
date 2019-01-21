@@ -1,21 +1,11 @@
 ---
-title: The 402-Receipt proposed standard
+title: Overview
 date: 2018-12-06 12:00:00 Z
-permalink: "/introduction.html"
-description: The 402-Receipt Proposed standard.
-documentation_order: 1
+permalink: "/overview.html"
+description: Overview of the 402-Receipt Proposed standard.
+documentation_order: 2
+summary: An overall summary of how the system works.
 ---
-
-# Version negative one.
-#### Goal of this document:
-This document describes a standard way for a website to demand or accept payment for access to resources without having a prior relationship with the customer or at any point collecting any card/bank information. The standard needs to be sufficiently defined that tools within it can be built independently and work together. It also needs to work for producers and consumers; if you have questions, ideas, or suggestions, about the technical details or about the high-level user experience, please reach out to us. 
-
-### How to help:
-This website is on [GitHub](https://github.com/ShapeOfMatter/direct-monetization-static); pull requests are welcome. You can also email us with questions or suggestions at <dmn@directmonetization.network>.
-We'll move to our own website an domain as soon as we're sure we have a good name.
-
-## Overview:
-The 402 HTTPS response code implies that a request is being denied because payment must be provided for the requested resource. [No standard way of following up to a 402 response has been normalized](https://en.wikipedia.org/wiki/List_of_HTTP_status_codes#402). The 402 response code has seen only niche usage, mostly for subscription-only APIs, and is effectively non-standard for human-facing HTTPS resources. This standard will fix that.
 
 We propose a suite of HTTPS headers, HTML head elements, and surrounding utilities to make direct monetization of web-accessible resources low-stress and safe even for non-specialist human users.
 
@@ -23,6 +13,16 @@ By design, this standard covers use-cases in which a 402 response would never ac
 
 Although this standard will focus on HTTPS exchanges; it's desirable that the framework translate clearly to other internet communications. 
 
+## How do you, an end-user, use this?
+
+In order to participate, you'll need to create an account with at least one [Notary]({{ "/notary.html" | relative_url }}). You'll need your web-browser to be logged into some sort of wallet; this will probably be a browser plugin, but we want to have javascript-cookie based options too. The wallet is the only part of the system that both knows who you are _and_ what you're doing.  
+If you aren't logged in properly, you may see prompts or placeholders as you browse the web.
+
+As you browse the web, websites you visit will tell your web-browser how much their pages cost. They do this using Header tags in their web-pages that direct your browser to a menu of pages you _might_ visit; this happens in the background without you needing to do anything.
+
+When you navitage to a page that costs money, if your wallet is configured to allow the transaction (based on the amount and possibly details about the website itself), then it will get a receipt for the needed amount from the Notary. This receipt is passed to the website, which then gives you access to the page or content in question. This happens in the background without you needing to do anything; as a human user you only need to worry about the payments system when you're configuring your account or if you don't like what your Client is doing.
+
+  
 ### Context for a 402 response
 It's generally poor user experience to reject a web-page request outright. A 402 response to such a request may work if a suitable placeholder page is available and the client is trusted to handle the response appropriately.
 

@@ -1,0 +1,1 @@
+[{{ include.s }}](/xml.html#xsd_row_{{ include.s }} "XML Schema Definition of {{ include.s }}")

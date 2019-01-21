@@ -1,0 +1,1 @@
+[{{ include.s.subject }}]({{ include.s.path | absolute_url }} "{{ include.s.meaning | slice: 0, 100 }}...")
