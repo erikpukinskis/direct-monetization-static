@@ -31,7 +31,7 @@
             {% for child in group %}
               - _{{ child.name }}{% if child.type %} ({{ child.type }}){% endif %}{% if child.optional %} [optional]{% endif %}_
             {% endfor %}
-            {% unless if forloop.last %}**OR**{% endif %}
+            {% unless forloop.last %}**OR**{% endunless %}
           {% endfor %}
         {% elsif type.list %}
           _List of `{{ type.list.name }}`{% if child.type %} ({{ type.list.type }}){% endif %}_
