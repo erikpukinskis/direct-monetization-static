@@ -91,3 +91,23 @@ td, th {
   padding: 0.5em;
 }
 
+.glossary_item {
+  border: solid $dark-color 1.5em;
+  margin-left: -1.5em;
+  padding: .5em;
+  .glossary_header {
+    color: $primary-color;
+    margin-left: -1.5em;
+    margin-top: -1.75em;
+  }
+  h4 {
+    margin-left: -0.1em;
+    font-style: normal;
+    &:after {
+      content: 📎
+    }
+  }
+  p {
+    margin: 0px;
+  }
+}
