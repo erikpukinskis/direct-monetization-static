@@ -32,7 +32,7 @@ defaults:
 permalink: pretty
 markdown: kramdown
 kramdown:
-  parse_block_html: true
+  parse_block_html: false
 site_colors:
   primary_background: "#FFFFFF"
   light_background: "#DDDDDD"
