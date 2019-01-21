@@ -4,7 +4,8 @@ date: 2018-12-27 16:00:00 Z
 permalink: "/parties.html"
 description: Description of the roles of the Client, Host, and Notary.
 documentation_order: 3
-summary: Describes the roles of the Client, the Host, and the Notary. Also outlines the behavior of the tools they'll use.
+summary: Describes the roles of the Client, the Host, and the Notary. Also outlines
+  the behavior of the tools they'll use.
 ---
 
 Because the 402-Receipts system is mostly passive from the perspective of the human user, we mostly speak in terms of the Client (the web-browser).  
