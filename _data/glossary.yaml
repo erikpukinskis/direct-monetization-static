@@ -5,17 +5,13 @@ menu_xml:
     A menu.xml lists resources (possibly HTML pages, but more frequently images or snippets) for which Receipts are accepted or required. 
     While browsing within the scope of a menu.xml, no resources should be needed that require receipts except as specified in that menu.  
     For many websites it will be feasable to have a single menu who's scope is the entire website.
-    
-    A menu.xml is advertised to the Client in a {% include link s=site.data.glossary.menu_header %}.
-    
-    [The XSD itself is here.]({{ "/402receipts.xsd" | absolute_url }})
 menu_header:
   subject: Receipts-Menu Header
   path: /http.html#glossary_menu_header
   meaning: |
     A `Receipts-Menu` header should be included with any page that uses resources for which receipts will be required,
     so that the Client will know what Receipts to get _before_ requesting those resources.
-    A menu header will contain a single absolute url to a {% include link s=site.data.glossary.menu_xml %} which contain the current page or resource in its scope.
+    A menu header will contain a single absolute url to a menu.xml file which contains the current page or resource in its scope.
     Any page or resource _may_ be served with a menu header. For some applications it may make sense to always give a single value for every request.
     An empty menu header will be treated the same way as no header at all.
     
@@ -31,7 +27,7 @@ accepts_header:
   subject: Receipts-Accepts Header
   path: /http.html#glossary_accepts_header
   meaning: |
-    The `Receipts-Accepts` response header value is a [compressed]({{ "/compression.html" | absolute_url }}) {% include link s=site.data.glossary.receipt_definition %} XML object.
+    The `Receipts-Accepts` response header value is a [compressed](/compression.html) [Receipt Definition XML object](/xml.html).
     The response to a request for a resource for which receipts are accepted must always have a `Receipts-Accepts` header
     if the response represents success (a 2** response) or any receipt- or payment-related failure (including a 402 response).
     In practice it's advisable for the `Receipts-Accepts` header to be consistent for a given resource regardles of the rest of the details of the response.
@@ -40,11 +36,10 @@ receipt_definition:
   path: /xml.html#glossary_receipt_definition
   meaning: |
     A Receipt Definition is an XML object which tells a Client what receipts would be accepted in order to access the relevant resource.
-    Receipt Definitions are both the values of the {% include link s=site.data.glossary.accepts_header %}s
-    and are part of {% include link s=site.data.glossary.menu_xml %} objects.
-    All menu.xml files covering a given resource, and the `Receipts-Accepts` header for that resource, should give the same Receipt Definitions
+    Receipt Definitions are both the values of the `Receipts-Accepts` HTTPS headers and are part of menu XML objects.
+    All menu.xml files covering a given resource, and the `Receipts-Accepts` header for that resource, should give the same Receipt Definitions.
     Receipt Definitions are covered in the same XSD name-space as a menu.xml.
-    Note that the root of a Receipt Definition is a {% include xsd_link s="definitions" %} element, which is a list of `definition`s.
+    Note that the root of a Receipt Definition is a `definitions` element, which is a list of `definition`s.
 cannonical_url:
   subject: Cannonical URL
   path: /parties.html#glossary_cannonical_url
@@ -63,7 +58,7 @@ receipt_header:
   path: /http.html#glossary_receipt_header
   meaning: |
     The `Receipts-Receipt` HTTP Request header will contain a compressed Receipt submission object.
-    See the [Receipts]({{ "/receipts.html" | absolute_url }}) page for a more detailed explaination of the contents of a Receipt
+    See the [Receipts](/receipts.html) page for a more detailed explaination of the contents of a Receipt
     and an ongoing discussion of how it will be signed and its textual representation.
 402_response:
   subject: '402 Response Code'

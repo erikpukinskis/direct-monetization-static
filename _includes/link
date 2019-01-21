@@ -1,1 +1,1 @@
-[{{ include.s.subject }}]({{ include.s.path | absolute_url }} "{{ include.s.meaning | slice: 0, 100 }}...")
+<a href="{{ include.s.path | absolute_url }}" title="{{ include.s.meaning | slice: 0, 100 }}...">{{ include.s.subject }}</a>

@@ -11,5 +11,7 @@ Here we provide detailed explainaitons of how the XML objects used in this stand
 {% include glossary_item s=site.data.glossary.menu_xml %}
 {% include glossary_item s=site.data.glossary.receipt_definition %}
 
+[The XSD itself is here.]({{ "/402receipts.xsd" | absolute_url }})
+
 {% include xsd.table xsd=site.data.402_receipts_xsd %}
 
