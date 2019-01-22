@@ -93,7 +93,7 @@ td, th {
 
 .glossary_item {
   border: solid $dark-color 1.5em;
-  margin-left: -1.5em;
+  margin: 1em 0em 1em -1.5em;
   padding: .5em;
   .glossary_header {
     color: $primary-color;
@@ -103,8 +103,9 @@ td, th {
   h4 {
     margin-left: -0.1em;
     font-style: normal;
-    &:after {
-      content: 📎
+    a::after {
+      content: " 📎";
+      font-size: 65%;
     }
   }
   p {
