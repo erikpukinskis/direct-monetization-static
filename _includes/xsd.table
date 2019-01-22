@@ -1,6 +1,6 @@
 <table>
-  <caption>XML Schema Documentation for the {{ include.xsd.namespace }}.</caption>
-  <thead><tr><td>{{ include.xsd.documentation }}</td></tr></thead>
+  <caption>XML Schema Documentation for the {{ include.xsd.namespace }} namespace.</caption>
+  <thead><tr><td>{{ include.xsd.documentation | markdownify }}</td></tr></thead>
   <thead>
     <tr>
       <th>Tag</th>
@@ -14,7 +14,7 @@
     </tr>
     {% for element in include.xsd.root_elements %}<tr>
       <td>`{{ element.name }}`</td>
-      <td>{{ element.documentation }}</td>
+      <td>{{ element.documentation | markdownify }}</td>
       <td>_see below_</td>
     </tr>{% endfor %}
   </tbody>
@@ -24,12 +24,12 @@
     </tr>
     {% for type in include.xsd.types %}<tr id="xsd_row_{{ type.name }}">
       <td>`{{ type.name }}`</td>
-      <td>{{ type.documentation }}</td>
+      <td>{{ type.documentation | markdownify }}</td>
       <td>
         {% if type.children[1] %}
           {% for group in type.children %}
             {% for child in group %}
-              - _{{ child.name }}{% if child.type %} ({{ child.type }}){% endif %}{% if child.optional %} [optional]{% endif %}_
+              - _{{ child.name }}{% if child.type %} ({{ child.type }}){% endif %}{% if child.optional %} (optional){% endif %}_
             {% endfor %}
             {% unless forloop.last %}**OR**{% endunless %}
           {% endfor %}
