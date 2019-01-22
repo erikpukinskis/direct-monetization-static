@@ -1,5 +1,5 @@
 <table>
-  <caption>XML Schema Documentation for the {{ include.xsd.namespace }} namespace.</caption>
+  <caption rowspan="3">XML Schema Documentation for the {{ include.xsd.namespace }} namespace.</caption>
   <thead><tr><td>{{ include.xsd.documentation | markdownify }}</td></tr></thead>
   <thead>
     <tr>
@@ -10,7 +10,7 @@
   </thead>
   <tbody>
     <tr>
-      <th>Root elements:</th>
+      <th rowspan="3">Root elements:</th>
     </tr>
     {% for element in include.xsd.root_elements %}<tr>
       <td><code class="highlighter-rouge">{{ element.name }}</code></td>
@@ -20,13 +20,13 @@
   </tbody>
   <tbody>
     <tr>
-      <th>Element types:</th>
+      <th rowspan="3">Element types:</th>
     </tr>
     {% for type in include.xsd.types %}<tr id="xsd_row_{{ type.name }}">
       <td><code class="highlighter-rouge">{{ type.name }}</code></td>
       <td>{{ type.documentation | markdownify }}</td>
       <td>
-        {% if type.children[1] %}
+        {% if type.children %}
           {% for group in type.children %}
             <ul>{% for child in group %}
               <li>{{ child.name }}{% if child.type %} <em>({{ child.type }})</em>{% endif %}{% if child.optional %} (optional){% endif %}</li>
@@ -34,7 +34,7 @@
             {% unless forloop.last %}**OR**{% endunless %}
           {% endfor %}
         {% elsif type.list %}
-          List of <code class="highlighter-rouge">{{ type.list.name }}</code>{% if child.type %} <em>({{ type.list.type }})<em>{% endif %}
+          List of <code class="highlighter-rouge">{{ type.list.name }}</code>{% if child.type %} <em>({{ type.list.type }})</em>{% endif %}
         {% else %}
           <em>{{ type.base }}<em>
           <ul>{% for restriction in type.restrictions %}
