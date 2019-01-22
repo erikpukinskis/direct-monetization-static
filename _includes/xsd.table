@@ -13,7 +13,7 @@
       <th>Root elements:</th>
     </tr>
     {% for element in include.xsd.root_elements %}<tr>
-      <td>`{{ element.name }}`</td>
+      <td><code class="highlighter-rouge">{{ element.name }}</code></td>
       <td>{{ element.documentation | markdownify }}</td>
       <td>see below</td>
     </tr>{% endfor %}
@@ -23,7 +23,7 @@
       <th>Element types:</th>
     </tr>
     {% for type in include.xsd.types %}<tr id="xsd_row_{{ type.name }}">
-      <td>`{{ type.name }}`</td>
+      <td><code class="highlighter-rouge">{{ type.name }}</code></td>
       <td>{{ type.documentation | markdownify }}</td>
       <td>
         {% if type.children[1] %}
@@ -34,7 +34,7 @@
             {% unless forloop.last %}**OR**{% endunless %}
           {% endfor %}
         {% elsif type.list %}
-          List of `{{ type.list.name }}`{% if child.type %} <em>({{ type.list.type }})<em>{% endif %}
+          List of <code class="highlighter-rouge">{{ type.list.name }}</code>{% if child.type %} <em>({{ type.list.type }})<em>{% endif %}
         {% else %}
           <em>{{ type.base }}<em>
           <ul>{% for restriction in type.restrictions %}
