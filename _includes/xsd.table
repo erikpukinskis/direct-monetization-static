@@ -31,13 +31,13 @@
             <ul class="xsd_child_list">{% for child in group %}
               <li><code class="highlighter-rouge">{{ child.name }}</code>{% if child.type %} <em>({{ child.type }})</em>{% endif %}{% if child.optional %} (optional){% endif %}</li>
             {% endfor %}</ul>
-            {% unless forloop.last %}<strong class="xsd_child_list">>OR</strong>{% endunless %}
+            {% unless forloop.last %}<strong class="xsd_child_list">OR</strong>{% endunless %}
           {% endfor %}
         {% elsif type.list %}
           List of <code class="highlighter-rouge">{{ type.list.name }}</code>{% if child.type %} <em>({{ type.list.type }})</em>{% endif %}
         {% else %}
           <em>{{ type.base }}</em>
-          <ul class="xsd_restriction_list">>{% for restriction in type.restrictions %}
+          <ul class="xsd_restriction_list">{% for restriction in type.restrictions %}
             <li>{{ restriction.kind }}: {{ restriction.value }}</li>
           {% endfor %}</ul>
         {% endif %}
