@@ -86,6 +86,7 @@ types:
     name: signer
 - name: signer
   documentation: "The absolute canonical HTTPS url identifying a Notary. Any one of the listed Notaries is sufficient."
+  base: anyURI
 - name: ttl
   documentation: 'An integer representing the maximum age in seconds of a Signed Receipt that will be accepted. Two independent conventions are recommended as "normal": The `ttl` should be 2720000, comfortably covering a month. The `ttl` should be the same for all items in a given domain.'
   base: unsignedInt
@@ -110,3 +111,4 @@ types:
   base: decimal
 - name: plan
   documentation: "An identifier which is assumed to mean something to the various parties involved."
+  base: string
