@@ -26,9 +26,9 @@
       </xs:documentation>
     </xs:annotation>{% if type.children[1] %}
     <xs:choice>{% for group in type.children %}
-      <xs:group><xs:all>{% for child in group %}
+      <xs:group><xs:sequence>{% for child in group %}
         <xs:element name="{{ child.name }}" type="{% if child.type %}{{ child.type }}{% else %}{{ child.name }}{% endif %}"{% if child.optional %} minOccurs="0"{% endif %}/>{% endfor %}
-      </xs:all></xs:group>{% endfor %}
+      </xs:sequence></xs:group>{% endfor %}
     </xs:choice>{% elsif type.children %}
     <xs:all>{% for child in type.children[0] %}
       <xs:element name="{{ child.name }}" type="{% if child.type %}{{ child.type }}{% else %}{{ child.name }}{% endif %}"{% if child.optional %} minOccurs="0"{% endif %}/>{% endfor %}
