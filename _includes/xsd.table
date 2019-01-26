@@ -3,9 +3,9 @@
   <thead><tr><td colspan="3">{{ include.xsd.documentation | markdownify }}</td></tr></thead>
   <thead>
     <tr>
-      <th>Tag</th>
-      <th>Description</th>
-      <th>Children/<em>Type</em></th>
+      <th class="xsd_tag_header">Tag</th>
+      <th class="xsd_description_header">Description</th>
+      <th class="xsd_type_header">Children/<em>Type</em></th>
     </tr>
   </thead>
   <tbody>

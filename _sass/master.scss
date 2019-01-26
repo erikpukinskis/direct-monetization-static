@@ -91,6 +91,10 @@ td, th {
   padding: 0.5em;
 }
 
+th.xsd_type_header {
+  min-width: 15em;
+}
+
 strong.xsd_child_list {
   display: block;
   text-align: center;
