@@ -91,6 +91,27 @@ td, th {
   padding: 0.5em;
 }
 
+strong.xsd_child_list {
+  display: block;
+  text-align: center;
+  &::before, &::after{
+    content: " — ";
+  }
+}
+
+ul.xsd_child_list {
+  li {
+    margin: 0em;
+    padding: 0em 0.5em;
+    list-style: none;
+  }
+}
+
+ul.xsd_restriction_list {
+  margin: 0em;
+  text-align: right;
+}
+
 .glossary_item {
   border: solid $dark-color 1.5em;
   margin: 1em 0em 1em -1.5em;
