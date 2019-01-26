@@ -1,6 +1,6 @@
 <table>
-  <caption rowspan="3">XML Schema Documentation for the {{ include.xsd.namespace }} namespace.</caption>
-  <thead><tr><td>{{ include.xsd.documentation | markdownify }}</td></tr></thead>
+  <caption>XML Schema Documentation for the {{ include.xsd.namespace }} namespace.</caption>
+  <thead><tr><td colspan="3">{{ include.xsd.documentation | markdownify }}</td></tr></thead>
   <thead>
     <tr>
       <th>Tag</th>
@@ -10,7 +10,7 @@
   </thead>
   <tbody>
     <tr>
-      <th rowspan="3">Root elements:</th>
+      <th colspan="3">Root elements:</th>
     </tr>
     {% for element in include.xsd.root_elements %}<tr>
       <td><code class="highlighter-rouge">{{ element.name }}</code></td>
@@ -20,7 +20,7 @@
   </tbody>
   <tbody>
     <tr>
-      <th rowspan="3">Element types:</th>
+      <th colspan="3">Element types:</th>
     </tr>
     {% for type in include.xsd.types %}<tr id="xsd_row_{{ type.name }}">
       <td><code class="highlighter-rouge">{{ type.name }}</code></td>
@@ -36,7 +36,7 @@
         {% elsif type.list %}
           List of <code class="highlighter-rouge">{{ type.list.name }}</code>{% if child.type %} <em>({{ type.list.type }})</em>{% endif %}
         {% else %}
-          <em>{{ type.base }}<em>
+          <em>{{ type.base }}</em>
           <ul>{% for restriction in type.restrictions %}
             <li>{{ restriction.kind }}: {{ restriction.value }}</li>
           {% endfor %}</ul>
