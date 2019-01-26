@@ -11,7 +11,7 @@ menu_header:
   meaning: |
     A `Receipts-Menu` header should be included with any page that uses resources for which receipts will be required,
     so that the Client will know what Receipts to get _before_ requesting those resources.
-    A menu header will contain a single absolute url to a menu.xml file which contains the current page or resource in its scope.
+    A menu header will contain a single absolute url to a [menu.xml](xml.html#glossary_menu_xml) file which contains the current page or resource in its scope.
     Any page or resource _may_ be served with a menu header. For some applications it may make sense to always give a single value for every request.
     An empty menu header will be treated the same way as no header at all.
     
@@ -27,7 +27,7 @@ accepts_header:
   subject: Receipts-Accepts Header
   path: /http.html#glossary_accepts_header
   meaning: |
-    The `Receipts-Accepts` response header value is a [compressed](/compression.html) [Receipt Definition XML object](/xml.html).
+    The `Receipts-Accepts` response header value is a [compressed](/compression.html) [Receipt Definition XML object](/xml.html#glossary_receipt_definition).
     The response to a request for a resource for which receipts are accepted must always have a `Receipts-Accepts` header
     if the response represents success (a 2** response) or any receipt- or payment-related failure (including a 402 response).
     In practice it's advisable for the `Receipts-Accepts` header to be consistent for a given resource regardles of the rest of the details of the response.
