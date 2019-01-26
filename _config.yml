@@ -40,4 +40,4 @@ site_colors:
   primary_font: "#000000"
   secondary_font: "#333333"
   tertiary_font: "#CCCCCC"
-cachebuster: 6
+cachebuster: 7
