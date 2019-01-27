@@ -13,26 +13,25 @@ The Host is _not_ just "the website". The Host is the computer (the server) whic
 The Notary is a third party, analogous to a traditoinal monetization platform but fundementally less powerful. The Notary sells Receitps to Clients; the Receipts are used to access websites.
 
 ## The Client
-The Client is requesting a resource for which a receipt is required.  
-It needs to detect references to [menu.xml files]({{ "/http.html" | relative_url }}) and parse them so that it can obtain receipts to include with reqests _on the first try_.
-It needs to compose the [Bare Receipt]({{ "/receipts.html" | relative_url }}) and communicate with the [Notary]({{ "/notary.html" | relative_url }}) to get it signed.
-Finally, it will include the Receipt in the Header of the HTTPS request.
+{% include glossary_item s=site.data.glossary.client %}
 
-The Client is an HTTPS client, typically a web browser being used by a human to view content. Existing web browsers don't have the behavior defined in this standard, so the user will need to install a browser plugin.  
+Existing web browsers don't have the behavior defined in this standard, so the user will need to install a browser plugin.  
 Javascript included on pages served may also be viable, and are strongly desireabl as they may be easier for some users to use. We need a clear idea of how that can work, and how it can support the same privacy and trustworthiness guarantees, before we can promise that it will be an option.
 
 A human user should be able to share receipts with them-self across devices. To do this effectively and securely with the signature scheme we intend will require a secure, encrypted, resiliant storage location for the user that's shared accross devices. We reffer to this as **the Wallet**. This could be left as an implementation detail, but if a javascript-only Client is possible then this standard will need to specify how it should communicate with a Wallet.
 
 ## The Host
-The Host is the server receiving the HTTPS request with the `Receipts-Receipt` header. We assume that the Host's address will match the `domain` (and often `item`) of the Bare Receipt, and this may be enforced by the Client or Notary.
+{% include glossary_item s=site.data.glossary.host %}
 
-The Host's role is to validate the receipt; they must accept any receipt satisfying the Receipt Definition. If appropreit Receipts are provided, then the Host will behave like any other HTTPS host. If the Receipt is missing, inapropreate, or invalid the the Host will give an informative [402 Response]({{ "/http.html" | relative_url }}).
+We assume that the Host's address will match the `domain` (and often `item`) of the Bare Receipt, and this may be enforced by the Client or Notary.
 
-Assuming we stick with a blind-signature scheme for [Receipts]({{ "/receipts.html" | relative_url }}), a truly static Host will not be able to use this standard. At absolute minimum the host will need to be able to strip the identifying key and signature and forward the receipt and Notary signature to the Notary; otherwise the Notary would never know to pay the Host.
-
+Assuming we stick with a blind-signature scheme for [Receipts]({{ "/receipts.html" | relative_url }}), a truly static Host will not be able to use this standard.
+At absolute minimum the host will need to be able to strip the identifying key and signature and forward the receipt and Notary signature to the Notary;
+otherwise the Notary would never know to pay the Host.  
 In practice, the Host should also be obliged to validate the receipt as part of request handling, and the Host **should not** forward the receipt until handling of the HTTPS request in question has finished. Submitting receipts to the Notary in batches (for example, every hour) can (in conjunction with some defensive behavior on the part of the Clients) prevent deanonymization of Receipts by timing analysis. 
 
-Furthermore, the Host will need to maintain a database of receipts it has received which would still be valid for use along with the Client Key they were originally submitted with. This is needed to prevent sharing of receipts between consumers.
+Furthermore, Hosts will generally need to maintain a database of receipts received which are still valid for reuse, along with the Client Key they were originally submitted with.
+This is needed to prevent sharing of receipts between consumers.
 
 ## The Notary
 The Notary signs the receipt. It is up to the parties involved to agree in advance what is promised when a receipt is signed; here we assume that the Notary has collected the money in question from the Client and will forward those funds to the Host by some outside channel. In this sense the "Notary" is properly thought of as a "Broker". Of course it's the Notary's responsibility to make themselves valuable to the other parties, but it's illuminating to explain here some of the ways they might do that.
