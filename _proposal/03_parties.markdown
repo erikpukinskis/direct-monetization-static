@@ -8,11 +8,8 @@ summary: Describes the roles of the Client, the Host, and the Notary. Also outli
   the behavior of the tools they'll use.
 ---
 
-Because the 402-Receipts system is mostly passive from the perspective of the human user, we mostly speak in terms of the Client (the web-browser).  
-The Host is the computer (the server) which provides the web pages to the Client. The Host is _not exactly just_ "the website", although this is an OK layperson's appoximation.
-The Notary is a third party, analogous to a traditoinal monetization platform but fundementally less powerful. The Notary sells Receitps to Clients; the Receipts are used to access websites.
-
 ## The Client
+Because the 402-Receipts system is mostly passive from the perspective of the human user, we mostly speak in terms of the Client (the web-browser).  
 {% include glossary_item s=site.data.glossary.client %}
 
 Existing web browsers don't have the behavior defined in this standard, so the user will need to install a browser plugin.
@@ -28,6 +25,8 @@ firstly because independently created Clients (for example a Firefox plugin and 
 and secondly becuase a safe standard for Wallet communication will be critical to an in-page javascript Client implementation. 
 
 ## The Host
+The Host is the computer (the server) which provides the web pages to the Client. 
+The Host is _not exactly just_ "the website", although this is an OK layperson's appoximation.
 {% include glossary_item s=site.data.glossary.host %}
 
 We assume that the Host's address will match the `domain` (and often `item`) of the Bare Receipt, and this may be enforced by the Client or Notary.
@@ -41,6 +40,7 @@ Furthermore, Hosts will generally need to maintain a database of receipts receiv
 This is needed to prevent sharing of receipts between consumers.
 
 ## The Notary
+The Notary is a third party, analogous to a traditoinal monetization platform but fundementally less powerful. The Notary sells Receitps to Clients; the Receipts are used to access websites.
 {% include glossary_item s=site.data.glossary.notary %}
 
 Of course it's the Notary's responsibility to make themselves valuable to the other parties,

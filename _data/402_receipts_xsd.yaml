@@ -101,7 +101,7 @@ types:
   documentation: "Usually an expression of monetary value. Notaries may use the `plan` option to represent receipts for which money is not a good model."
   children:
   - - name: units
-      name: amount
+    - name: amount
   - - name: plan
 - name: units
   documentation: "A currency code. [ISO4217](https://en.wikipedia.org/wiki/ISO_4217) codes are recommended."

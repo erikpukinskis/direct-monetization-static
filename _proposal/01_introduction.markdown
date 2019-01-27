@@ -21,7 +21,7 @@ The 402 HTTPS response code implies that a request is being denied because payme
 
 ## Table of contents:
 {% assign pages = site.proposal | sort: 'documentation_order' %}
-{% for p in pages %}{% if p.summary %}
-  - [{{ p.title }}]({{ p.url }}) — p.summary
+{% for p in pages %}{% if p.summary and p.documentation_order %}
+  - [{{ p.title }}]({{ p.url }}) — {{ p.summary }}
 {% endif %}{% endfor %}
 

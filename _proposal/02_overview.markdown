@@ -20,11 +20,12 @@ If you aren't logged in properly, you may see prompts or placeholders as you bro
 
 As you browse the web, websites you visit will tell your web-browser how much their pages cost. They do this using Header tags in their web-pages that direct your browser to a menu of pages you _might_ visit; this happens in the background without you needing to do anything.
 
-When you navitage to a page that costs money, if your wallet is configured to allow the transaction (based on the amount and possibly details about the website itself), then it will get a receipt for the needed amount from the Notary. This receipt is passed to the website, which then gives you access to the page or content in question. This happens in the background without you needing to do anything; as a human user you only need to worry about the payments system when you're configuring your accounts.
+When you navitage to a page that costs money, if your wallet is configured to allow the transaction (based on the amount and any details about the website itself), then it will fetch a receipt for the needed amount from the Notary.
+This receipt is passed to the website, which then gives you access to the page or content in question. This happens in the background without you needing to do anything; as a human user you only need to worry about the payments system when you're configuring your accounts.
 
   
 ### Context for a 402 response
-It's generally poor user experience to reject a web-page request outright. A 402 response to such a request may work if a suitable placeholder page is available and the {% include link s=site.data.glossary.client %} is trusted to handle the response appropriately.
+It's generally poor user experience to reject a web-page request outright. A {% include link s=site.data.glossary.402_response c="402 Response" %} to such a request may work if a suitable placeholder page is available and the {% include link s=site.data.glossary.client %} is trusted to handle the response appropriately.
 
 In practice, it is usually better to give  normal response to the principal request and require receipts for a key resource used by that page, for example an image or text-block. To avoid performance impacts, a page should use a {% include link s=site.data.glossary.menu_header %} to tell the client what receipts the secondary resource will require. **This information must be accurate to avoid a visitor paying for a useless receipt.**
 
