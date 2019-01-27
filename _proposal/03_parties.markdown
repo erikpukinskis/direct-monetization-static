@@ -9,16 +9,23 @@ summary: Describes the roles of the Client, the Host, and the Notary. Also outli
 ---
 
 Because the 402-Receipts system is mostly passive from the perspective of the human user, we mostly speak in terms of the Client (the web-browser).  
-The Host is _not_ just "the website". The Host is the computer (the server) which provides the web pages to the Client.
+The Host is the computer (the server) which provides the web pages to the Client. The Host is _not exactly just_ "the website", although this is an OK layperson's appoximation.
 The Notary is a third party, analogous to a traditoinal monetization platform but fundementally less powerful. The Notary sells Receitps to Clients; the Receipts are used to access websites.
 
 ## The Client
 {% include glossary_item s=site.data.glossary.client %}
 
-Existing web browsers don't have the behavior defined in this standard, so the user will need to install a browser plugin.  
-Javascript included on pages served may also be viable, and are strongly desireabl as they may be easier for some users to use. We need a clear idea of how that can work, and how it can support the same privacy and trustworthiness guarantees, before we can promise that it will be an option.
+Existing web browsers don't have the behavior defined in this standard, so the user will need to install a browser plugin.
 
-A human user should be able to share receipts with them-self across devices. To do this effectively and securely with the signature scheme we intend will require a secure, encrypted, resiliant storage location for the user that's shared accross devices. We reffer to this as **the Wallet**. This could be left as an implementation detail, but if a javascript-only Client is possible then this standard will need to specify how it should communicate with a Wallet.
+Javascript included on pages served may be able to act as the Client; this would be good because it would be easier for some users.  
+We need a clear idea of _how_ that can work, and how it can support the same privacy and trustworthiness guarantees,  
+before we can promise that it will be an option.
+
+{% include glossary_item s=site.data.glossary.wallet %} 
+
+It's desireable to include the communication between the Wallet and the Client in this standard,
+firstly because independently created Clients (for example a Firefox plugin and an Android app) should be able to use a common Wallet,
+and secondly becuase a safe standard for Wallet communication will be critical to an in-page javascript Client implementation. 
 
 ## The Host
 {% include glossary_item s=site.data.glossary.host %}
@@ -34,19 +41,22 @@ Furthermore, Hosts will generally need to maintain a database of receipts receiv
 This is needed to prevent sharing of receipts between consumers.
 
 ## The Notary
-The Notary signs the receipt. It is up to the parties involved to agree in advance what is promised when a receipt is signed; here we assume that the Notary has collected the money in question from the Client and will forward those funds to the Host by some outside channel. In this sense the "Notary" is properly thought of as a "Broker". Of course it's the Notary's responsibility to make themselves valuable to the other parties, but it's illuminating to explain here some of the ways they might do that.
+{% include glossary_item s=site.data.glossary.notary %}
+
+Of course it's the Notary's responsibility to make themselves valuable to the other parties,
+but it's illuminating to explain here some of the ways they might do that.
 
 - The Notary will generally relieve the Host of payment processing complexity, and account-management more generally.
 - When a Host joins a Notary's network, they hope to receive payments from a wide audience of consumers; the Host can focus on _traffic_ and _audience retention_ instead of a _sales funnel_. 
 - The Notary can protect the Client from abusive Hosts in various ways, including proactive monitoring of member Hosts and post-hoc remediation. (Point-of-sale protections are generally not feasible for the Notary, as receipt signatures are issued blindly. Such protections can be built into the [Wallet]({{ "client.html" | relative_url }}).)
-- For a Client to set up an account with a given Notary generally constitutes pre-authorization of certain kinds of payments for certain kinds of resources. These kinds of restrictions and protections can be configured with the Notary or in the Wallet.
+- For a Client to set up an account with a given Notary generally constitutes pre-authorization of certain kinds of payments for certain kinds of resources. In this sense Notaries act like "channels" to which a user can subscribe.
 
 In practice, we only anticipate two kinds of Notaries.
 
 - A Host could be their own Notary. This could accomplish any of the same functionalities as existing paywalls offer, although the standardized machine interface would enable smoother user-experiences. 
 - **A Notary can act as a network, channel, buyer's club, or federation.** Many Hosts and many Clients are assumed to have prior arrangements (accounts) with a given Notary; this is the Notary's network. As long as a Host and Client have a network in common, payment for resources can typically proceed _automatically_.
 
-Notaries with larger networks will obviously have an advantage.  
+Notaries with larger networks will obviously have an advantage toward attracting new members of both kinds.  
 On the one hand, the variety of use-cases this standard can accommodate, and the variety of legal, technical, and business paradigms people operate in, will likely ensure a plurality of Notaries. On the other hand, it is still desirable to include protections _against the Notaries_. Consumers are presumed to have given their payment processing information (a debit card, for example) directly to the Notary, but privacy of their data can still be protected by insisting on a blind-signature scheme, and by proper design of Wallets and Clients. Producers (Hosts) can best be protected by making sure self-Notarization is a viable option (although this does put the onus of payment processing back in their lap).
 
 {% include glossary_item s=site.data.glossary.cannonical_url %}

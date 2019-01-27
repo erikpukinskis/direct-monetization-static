@@ -76,7 +76,10 @@ notary:
   subject: Notary
   path: /parties.html#glossary_notary
   meaning: |
-    
+    The Notary signs the receipt.  
+    It is up to the parties involved to agree in advance what is promised when a receipt is signed; 
+    here we assume that the Notary has collected the money in question from the Client and will forward those funds to the Host by some outside channel. 
+    In this sense the "Notary" is properly thought of as a "Broker".
 client:
   subject: Client
   path: /parties.html#glossary_client
@@ -93,7 +96,8 @@ wallet:
   subject: Wallet
   path: /parties.html#glossary_wallet
   meaning: |
-    
+    A wallet is a (presumably encrypted, etc) storage location seperate from the Client where receipts owned by a user can be stored for reuse.
+    This is necessary specifically because users will want to reuse receipts accross devices.
 host:
   subject: Host
   path: /parties.html#glossary_host
