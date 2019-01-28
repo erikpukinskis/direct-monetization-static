@@ -33,7 +33,9 @@ In practice, it is usually better to give  normal response to the principal requ
 We anticipate a distinction between the {% include link s=site.data.glossary.client %} (typically a web-browser, possibly with a plugin) and a remote {% include link s=site.data.glossary.wallet %} which will allow persistence of user-data between clients and devices.
 
 ### Producer tools:
-Different {% include link s=site.data.glossary.host %}s will have different needs. The textbook usage will be a server plugin, designated servlet, or specialized CDN, that will inspect requests for receipts, validate the receipts, and forward them to their respective Notaries for disbursement. 
+Different {% include link s=site.data.glossary.host c="Hosts" %}s will have different needs. 
+Typically there will be a server plugin, designated servlet, or specialized CDN, 
+that will inspect requests for receipts, validate the receipts, and forward them to their respective Notaries for disbursement. 
 
 ### Brokers and Networks:
 Throughout this standard we speak of a {% include link s=site.data.glossary.notary %}. The Notary's role is not just to sign receipts; they also handle the collection of money from consumers and disbursement of it to producers. In the typical case both the host and the client will have a prior relationship (membership or account) set up with one or more Notary; as long as they have one in common the user experience can proceed seamlessly.

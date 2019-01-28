@@ -4,11 +4,11 @@ layout: default
 
 <nav>
   {% assign pages = site.proposal | sort: 'documentation_order' %}
-  {% for p in pages %}
+  {% for p in pages %}{% if p.documentation_order %}
     <span class="nav_item{% if p.title == page.title %} selected{% endif %}">
       <a href="{{ p.url }}">{{ p.title }}</a>
     </span>
-  {% endfor %}
+    {% endif %}{% endfor %}
 </nav>
 <h1>{{ page.title }}</h1>
 {{ content }}
