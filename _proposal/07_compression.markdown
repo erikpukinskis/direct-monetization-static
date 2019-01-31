@@ -5,7 +5,8 @@ permalink: "/compression.html"
 description: Conventions for compressing objects within the context of the 402-Receipts
   standard.
 documentation_order: 7
-summary: Exact specification of how larger objects should be compressed, for example for use in HTTPS headers.
+summary: Exact specification of how larger objects should be compressed, for example
+  for use in HTTPS headers.
 ---
 
 There are a few places throughout the standard, particularly in HTTPS Headers, where compression is required.  
