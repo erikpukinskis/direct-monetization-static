@@ -40,7 +40,7 @@ receipt_definition:
     All menu.xml files covering a given resource, and the `Receipts-Accepts` header for that resource, should give the same Receipt Definitions.
     Receipt Definitions are covered in the same XSD name-space as a menu.xml.
     Note that the root of a Receipt Definition is a `definitions` element, which is a list of `definition`s.
-cannonical_url:
+canonical_url:
   subject: Cannonical URL
   path: /parties.html#glossary_cannonical_url
   meaning: |
