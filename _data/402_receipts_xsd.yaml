@@ -1,4 +1,4 @@
-namespace: "https://TODO.todo"
+namespace: "https://402.TBD"
 documentation: XML Schema for menu.xml files and for Receipt Definition XML objects.
 root_elements:
 - name: menu

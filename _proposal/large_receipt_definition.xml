@@ -13,7 +13,7 @@ A **Receipt Definition** is an XML object within the same name-space as a Menu X
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="TODO">
+<definitions>
   <definition>
     <domain>https://www.example.com/</domain>
     <item>/path/image.png</item>
@@ -27,11 +27,11 @@ A **Receipt Definition** is an XML object within the same name-space as a Menu X
       <cost>
         <units>USD</units>
         <amount>0.05</amount>
-      <cost>
+      </cost>
       <cost>
         <units>XRP</units>
         <amount>0.15</amount>
-      <cost>
+      </cost>
     </costs>
   </definition>
   <definition>
@@ -47,11 +47,11 @@ A **Receipt Definition** is an XML object within the same name-space as a Menu X
       <cost>
         <units>USD</units>
         <amount>2.0</amount>
-      <cost>
+      </cost>
       <cost>
         <units>XRP</units>
         <amount>6.0</amount>
-      <cost>
+      </cost>
     </costs>
   </definition>
   <definition>
