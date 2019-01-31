@@ -28,5 +28,5 @@ def uncompress(b64_string):
 
 - Is the above description sufficiently specific? A Haskell code example would make the bytewise representation more explicit.
 - Is zlib the ideal compression scheme? gzip is basically just as ubiqutious and it's what the HTTP body will typically use. On the other hand gzip libraries seem to be written for "files", and it's better here to work with "strings". 
-- Should this compression be optional? After all, even an uncompressed {% include link s=site.data.glossary.receipt_definition $} will typically be less than 10KB. If we make it optional, do we need any kind of flag to denote compression?
+- Should this compression be optional? After all, even an uncompressed {% include link s=site.data.glossary.receipt_definition %} will typically be less than 10KB. If we make it optional, do we need any kind of flag to denote compression?
 
