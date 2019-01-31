@@ -20,7 +20,7 @@ If you aren't logged in properly, you may see prompts or placeholders as you bro
 
 As you browse the web, websites you visit will tell your web-browser how much their pages cost. They do this using Header tags in their web-pages that direct your browser to a menu of pages you _might_ visit; this happens in the background without you needing to do anything.
 
-When you navitage to a page that costs money, if your wallet is configured to allow the transaction (based on the amount and any details about the website itself), then it will fetch a receipt for the needed amount from the Notary.
+When you navigate to a page that costs money, if your wallet is configured to allow the transaction (based on the amount and any details about the website itself), then it will fetch a receipt for the needed amount from the Notary.
 This receipt is passed to the website, which then gives you access to the page or content in question. This happens in the background without you needing to do anything; as a human user you only need to worry about the payments system when you're configuring your accounts.
 
   

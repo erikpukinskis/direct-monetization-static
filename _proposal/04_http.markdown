@@ -4,10 +4,11 @@ date: 2018-12-06 12:00:00 Z
 permalink: "/http.html"
 description: HTTP components used in the 402-Receipt Proposed standard.
 documentation_order: 4
+summary: Documentation of HTTPS headers and response codes used in the 402-Receipt Proposed standard.
 ---
 
 Most of the communication needed by this standard happens in the HTTP headers of requests and responses.  
-For ease of implementation, some items may be specified in HTML. Specifically, the address of a menu.xml may be given in a `<meta>` tag instead of a Header. **Inline HTML Receipt Definitions are desireable, but have not yet been specified.**
+For ease of implementation, some items may be specified in HTML. Specifically, the address of a menu.xml may be given in a `<meta>` tag instead of a Header. **Inline HTML Receipt Definitions are desirable, but have not yet been specified.**
 
 Additionally, the meaning of relevant HTTP Response codes is explained.
 

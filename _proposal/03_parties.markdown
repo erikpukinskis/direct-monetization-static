@@ -20,13 +20,13 @@ before we can promise that it will be an option.
 
 {% include glossary_item s=site.data.glossary.wallet %} 
 
-It's desireable to include the communication between the Wallet and the Client in this standard,
+It's desirable to include the communication between the Wallet and the Client in this standard,
 firstly because independently created Clients (for example a Firefox plugin and an Android app) should be able to use a common Wallet,
-and secondly becuase a safe standard for Wallet communication will be critical to an in-page javascript Client implementation. 
+and secondly because a safe standard for Wallet communication will be critical to an in-page javascript Client implementation. 
 
 ## The Host
 The Host is the computer (the server) which provides the web pages to the Client. 
-The Host is _not exactly just_ "the website", although this is an OK layperson's appoximation.
+The Host is _not exactly just_ "the website", although this is an OK layperson's approximation.
 {% include glossary_item s=site.data.glossary.host %}
 
 We assume that the Host's address will match the `domain` (and often `item`) of the Bare Receipt, and this may be enforced by the Client or Notary.
@@ -40,7 +40,7 @@ Furthermore, Hosts will generally need to maintain a database of receipts receiv
 This is needed to prevent sharing of receipts between consumers.
 
 ## The Notary
-The Notary is a third party, analogous to a traditoinal monetization platform but fundementally less powerful. The Notary sells Receitps to Clients; the Receipts are used to access websites.
+The Notary is a third party, analogous to a traditional monetization platform but fundamentally less powerful. The Notary sells Receipts to Clients; the Receipts are used to access websites.
 {% include glossary_item s=site.data.glossary.notary %}
 
 Of course it's the Notary's responsibility to make themselves valuable to the other parties,
@@ -59,6 +59,6 @@ In practice, we only anticipate two kinds of Notaries.
 Notaries with larger networks will obviously have an advantage toward attracting new members of both kinds.  
 On the one hand, the variety of use-cases this standard can accommodate, and the variety of legal, technical, and business paradigms people operate in, will likely ensure a plurality of Notaries. On the other hand, it is still desirable to include protections _against the Notaries_. Consumers are presumed to have given their payment processing information (a debit card, for example) directly to the Notary, but privacy of their data can still be protected by insisting on a blind-signature scheme, and by proper design of Wallets and Clients. Producers (Hosts) can best be protected by making sure self-Notarization is a viable option (although this does put the onus of payment processing back in their lap).
 
-{% include glossary_item s=site.data.glossary.cannonical_url %}
+{% include glossary_item s=site.data.glossary.canonical_url %}
 
 

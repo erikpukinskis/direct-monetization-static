@@ -4,7 +4,7 @@ menu_xml:
   meaning: |
     A menu.xml lists resources (possibly HTML pages, but more frequently images or snippets) for which Receipts are accepted or required. 
     While browsing within the scope of a menu.xml, no resources should be needed that require receipts except as specified in that menu.  
-    For many websites it will be feasable to have a single menu who's scope is the entire website.
+    For many websites it will be feasible to have a single menu who's scope is the entire website.
 menu_header:
   subject: Receipts-Menu Header
   path: /http.html#glossary_menu_header
@@ -15,8 +15,8 @@ menu_header:
     Any page or resource _may_ be served with a menu header. For some applications it may make sense to always give a single value for every request.
     An empty menu header will be treated the same way as no header at all.
     
-    There are two equivilant ways of representing a menu header. Only one should be used in any given response.
-    In many cases it will be sufficient to include an HTML `<meta>` tag. The `Receipts-Menu` HTTP header is equivilant and can be used with non-HTML resources.
+    There are two equivalent ways of representing a menu header. Only one should be used in any given response.
+    In many cases it will be sufficient to include an HTML `<meta>` tag. The `Receipts-Menu` HTTP header is equivalent and can be used with non-HTML resources.
     ```html
     <meta property="receipts:menu" content="https://www.example.com/menu.xml" />
     ```
@@ -30,7 +30,7 @@ accepts_header:
     The `Receipts-Accepts` response header value is a [compressed](/compression.html) [Receipt Definition XML object](/xml.html#glossary_receipt_definition).
     The response to a request for a resource for which receipts are accepted must always have a `Receipts-Accepts` header
     if the response represents success (a 2** response) or any receipt- or payment-related failure (including a 402 response).
-    In practice it's advisable for the `Receipts-Accepts` header to be constant for a given resource regardles of the rest of the details of the response.
+    In practice it's advisable for the `Receipts-Accepts` header to be constant for a given resource regardless of the rest of the details of the response.
 receipt_definition:
   subject: Receipt Definition
   path: /xml.html#glossary_receipt_definition
@@ -51,14 +51,14 @@ cannonical_url:
       `TODO: specify how a receipt could be passed into this page from the URL hash for blind-signing and how the Notary's signature would be communicated back to the Client.`
     - A POST request to the canonical URL is used to obtain a Notary Signature;
       a signature with a pre-approved Client's private key should be sufficient authentication for this.
-      `TODO: the details of this process will be filled in as the cryptographic detials of receipt signing are determined.`
+      `TODO: the details of this process will be filled in as the cryptographic details of receipt signing are determined.`
     - A PUT request to the canonical URL is used by the Host to redeem receipts, in batches.
 receipt_header:
   subject: Receipts-Receipt Header
   path: /http.html#glossary_receipt_header
   meaning: |
     The `Receipts-Receipt` HTTP Request header will contain a compressed Receipt submission object.
-    See the [Receipts](/receipts.html) page for a more detailed explaination of the contents of a Receipt
+    See the [Receipts](/receipts.html) page for a more detailed explanation of the contents of a Receipt
     and an ongoing discussion of how it will be signed and its textual representation.
 402_response:
   subject: '402 Response Code'
@@ -96,8 +96,8 @@ wallet:
   subject: Wallet
   path: /parties.html#glossary_wallet
   meaning: |
-    A wallet is a (presumably encrypted, etc) storage location seperate from the Client where receipts owned by a user can be stored for reuse.
-    This is necessary specifically because users will want to reuse receipts accross devices.
+    A wallet is a (presumably encrypted, etc) storage location separate from the Client where receipts owned by a user can be stored for reuse.
+    This is necessary specifically because users will want to reuse receipts across devices.
 host:
   subject: Host
   path: /parties.html#glossary_host
@@ -107,5 +107,6 @@ host:
     
     It is the Host's responsibility to validate incoming receipts; 
     they must accept any receipt satisfying the [Receipt Definition](/xml.html#glossary_receipt_definition) published for the given resource.
-    If appropreit Receipts are provided, then the Host will respond like any other HTTPS host.
-    If the Receipt is missing, inapropreate, or invalid, then the the Host will give an informative [402 Response](/http.html#glossary_402_response).
+    If appropriate Receipts are provided, then the Host will respond like any other HTTPS host.
+    If the Receipt is missing, inappropriate, or invalid, then the the Host will give an informative [402 Response](/http.html#glossary_402_response).
+

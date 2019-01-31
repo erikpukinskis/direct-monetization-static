@@ -4,7 +4,7 @@ root_elements:
 - name: menu
   documentation: The root element of a menu.xml file.
 - name: definitions
-  documentation: "The root element of a Receipt Defintion xml fragment. Also a child of a `<resource>` within a menu.xml file."
+  documentation: "The root element of a Receipt Definition xml fragment. Also a child of a `<resource>` within a menu.xml file."
 types:
 - name: menu
   documentation: "A menu of resources within a given scope for which receipts are required or accepted."
