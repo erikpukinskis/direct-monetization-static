@@ -9,9 +9,9 @@ $font-color: {{ site.site_colors.primary_font }};
 $secondary-font-color: {{ site.site_colors.secondary_font }};
 $tertiary-font-color: {{ site.site_colors.tertiary_font }};
 
-$heading-font: 'sans-serif';
-$content-font: 'serif';
-$code-font: 'monospace';
+$heading-font: sans-serif;
+$content-font: serif;
+$code-font: monospace;
 
 @import "master";
 
