@@ -11,6 +11,10 @@ header {
   line-height: 20px;
   margin: 40px 0;
 
+  &.extra-space {
+    margin-top: 60px;
+  }
+
   .text {
     background: $block-color;
     color: white;
