@@ -9,8 +9,12 @@ $block-color: {{ site.site_colors.block_background }};
 $font-color: {{ site.site_colors.primary_font }};
 $secondary-font-color: {{ site.site_colors.secondary_font }};
 $tertiary-font-color: {{ site.site_colors.tertiary_font }};
-$glossary-color: {{ site.site_colors.glossary }};
-$glossary-text-color: {{ site.site_colors.glossary_text }};
+$accent: #eea900;
+$accent-text: #ff8c3b;
+
+$glossary-color: #efaa00;
+$glossary-text-color: #fff786;
+
 
 $heading-font: sans-serif;
 $content-font: sans-serif;

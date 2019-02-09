@@ -6,6 +6,8 @@ description: The Direct Monetization Network will be a full-stack suite of tools
   creators and their audiences, implementing a 402-based internet payment scheme.
 ---
 
+<div class="splash" markdown="1">
+
 ### Get access. Support creators. Drop ads.
 
 
@@ -16,6 +18,8 @@ We will develop open source tools for use with the 402-Receipts protocol, and of
 **The proposed [402-Receipts standard]({{"/introduction.html" | relative_url}}) will be an open standard.** It will move to its own website as soon as the name is settled. We are seeking feedback from the public and prospective users.
 
 <a class="call-to-action" href="introduction.html">Read the standard</a>
+
+</div>
 
 ## How will I use this?
 **Here's what it's like for a customer:** You sign up for a managed account, or host your own wallet and give it access to your DMN account. As you browse the web your account is charged for pages you visit. Your wallet protects you from unexpected charges and abuse. The Network blocks payments to fraudulent websites. The underlying protocol makes it possible for this to happen without the websites knowing who you are and without the Network knowing what websites you visit.
