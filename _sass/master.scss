@@ -75,7 +75,7 @@ h4 {
 
 p {
   margin: 1em 0 0 0;
-  line-height: 1.3em;
+  line-height: 1.5em;
 }
 
 a {
@@ -94,7 +94,7 @@ em {
 
 code {
   font-family: $code-font;
-  border-radius: 1px;
+  border-radius: 2px;
   background: $light-color;  
   display: inline-block;
   padding: 1px 3px;
@@ -191,4 +191,52 @@ ul.xsd_restriction_list {
   background: $accent;
   border-bottom: 3px solid $accent-text;
   border-radius: 6px;
+}
+
+
+ul.timeline {
+  list-style-type: none;
+
+  li {
+    em {
+      display: block;
+      font-weight: bold;
+      color: $opposite-accent;
+      font-style: normal;
+      margin-bottom: 0.25em;
+      -webkit-font-smoothing: antialiased;
+    }
+    position:relative; /* so that pseudoelements are positioned relatively to their "li"s*/
+    /* use padding-bottom instead of margin-bottom.*/ 
+    margin-bottom: 0; /* This overrides previously specified margin-bottom */
+    padding-bottom: 2.5em;
+
+    &:after {
+      /* bullets */
+      content: "●";
+      color: $opposite-accent;
+      font-size: 18px;
+      position: absolute;
+      left: -20px; /*adjust manually*/
+      top: -4px;
+    }
+
+    &:before {
+      /* lines */
+      content:"";
+      position: absolute;
+      left: -16px; /* adjust manually */
+      border-left: 3px solid $opposite-accent;
+      height: 100%;
+      width: 1px;
+    }
+
+    &:first-child:before {
+     top: 6px; /* moves the line down so that it disappears under the bullet. */
+    }
+
+    &:last-child:before {
+     height: 6px; /* shorten the line so it goes only up to the bullet. */
+    }
+  }
 }
