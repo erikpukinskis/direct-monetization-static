@@ -8,7 +8,6 @@ description: The Direct Monetization Network will be a full-stack suite of tools
 
 ### Get access. Support creators. Drop ads.
 
--------------------------------------------
 
 The Direct Monetization Network (DMN) will be a full-stack suite of tools for creators and their audiences, implementing a 402-based internet payment scheme.
 
