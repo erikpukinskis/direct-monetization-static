@@ -35,7 +35,7 @@ kramdown:
   parse_block_html: false
 site_colors:
   primary_background: "#FFFFFF"
-  light_background: "#DDDDDD"
+  light_background: "#EEEEEE"
   dark_background: "#999999"
   primary_font: "#000000"
   block_background: "#000000"

@@ -103,9 +103,10 @@ em {
 
 code {
   font-family: $code-font;
-  background: $light-color;
+  border-radius: 1px;
+  background: $light-color;  
   display: inline-block;
-  padding: 1px 5px;
+  padding: 1px 3px;
 }
 
 .highlighter-rouge pre {
