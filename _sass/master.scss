@@ -6,20 +6,39 @@ body {
   font-size: 15px;
 }
 
+header {
+  font-family: $heading-font;
+  line-height: 20px;
+  margin: 40px 0;
+  span {
+    background: black;
+    color: white;
+    padding: 5px 20px 5px 3px;
+    font-size: 24px;
+  }
+}
+
 .document {
   padding: 0% 10% 35vh 10%;
 }
 
+#page {
+  display: flex;
+  flex-direction: row;
+}
+
+article {
+  display: block;
+}
+
 nav {
-  border: 1px solid $dark-color;
-  margin: 2px;
-  padding: 2px;
-  font-size: 80%;
+  margin-right: 50px;
   .nav_item {
-    display: inline-block;
-    margin: 2px;
-    padding: 2px;
-    border: 1px solid $dark-color;
+    min-width: 150px;
+    max-width: 150px;
+    display: block;
+    padding: 10px 20px 10px 3px;
+    margin-bottom: 10px;
     color: $secondary-font-color;
   }
   .selected {
