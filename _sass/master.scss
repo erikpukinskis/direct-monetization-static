@@ -12,7 +12,7 @@ header {
   margin: 40px 0;
 
   .text {
-    background: black;
+    background: $block-color;
     color: white;
     padding: 5px 20px 5px 3px;
     font-size: 24px;
@@ -48,9 +48,22 @@ nav {
   }
 }
 
+.call-to-action {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  width: 9em;
+  text-align: center;
+  font-weight: normal;
+  background: $block-color;  
+}
+
 h1 {
   font-size: 250%;
-  margin: 1vw 1vw 1vw -2vw;
+  margin: 0 0 30px 0;
 }
 
 h2 {

@@ -38,6 +38,8 @@ site_colors:
   light_background: "#DDDDDD"
   dark_background: "#999999"
   primary_font: "#000000"
+  block_background: "#000000"
   secondary_font: "#333333"
   tertiary_font: "#CCCCCC"
+  accent: "#0dd08b"
 cachebuster: 10

@@ -4,6 +4,8 @@
 $primary-color: {{ site.site_colors.primary_background }};
 $light-color: {{ site.site_colors.light_background }};
 $dark-color: {{ site.site_colors.dark_background }};
+$accent-color: {{ site.site_colors.accent }};
+$block-color: {{ site.site_colors.block_background }};
 
 $font-color: {{ site.site_colors.primary_font }};
 $secondary-font-color: {{ site.site_colors.secondary_font }};
