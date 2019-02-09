@@ -41,5 +41,6 @@ site_colors:
   block_background: "#000000"
   secondary_font: "#333333"
   tertiary_font: "#CCCCCC"
-  accent: "#0dd08b"
+  glossary: "#ffee50"
+  glossary_text: "#ca6e1a"
 cachebuster: 10

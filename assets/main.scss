@@ -4,12 +4,13 @@
 $primary-color: {{ site.site_colors.primary_background }};
 $light-color: {{ site.site_colors.light_background }};
 $dark-color: {{ site.site_colors.dark_background }};
-$accent-color: {{ site.site_colors.accent }};
 $block-color: {{ site.site_colors.block_background }};
 
 $font-color: {{ site.site_colors.primary_font }};
 $secondary-font-color: {{ site.site_colors.secondary_font }};
 $tertiary-font-color: {{ site.site_colors.tertiary_font }};
+$glossary-color: {{ site.site_colors.glossary }};
+$glossary-text-color: {{ site.site_colors.glossary_text }};
 
 $heading-font: sans-serif;
 $content-font: sans-serif;
