@@ -10,11 +10,13 @@ header {
   font-family: $heading-font;
   line-height: 20px;
   margin: 40px 0;
-  span {
+
+  .text {
     background: black;
     color: white;
     padding: 5px 20px 5px 3px;
     font-size: 24px;
+    text-decoration: none;
   }
 }
 
