@@ -35,9 +35,13 @@ kramdown:
   parse_block_html: false
 site_colors:
   primary_background: "#FFFFFF"
-  light_background: "#DDDDDD"
+  light_background: "#EEEEEE"
   dark_background: "#999999"
+  block_background: "#000000"
   primary_font: "#000000"
   secondary_font: "#333333"
   tertiary_font: "#CCCCCC"
-cachebuster: 10
+  glossary: "#ffee50"
+  glossary_text: "#ca6e1a"
+  highlight: "#ea7332"
+cachebuster: 11

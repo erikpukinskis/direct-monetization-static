@@ -4,14 +4,22 @@
 $primary-color: {{ site.site_colors.primary_background }};
 $light-color: {{ site.site_colors.light_background }};
 $dark-color: {{ site.site_colors.dark_background }};
+$block-color: {{ site.site_colors.block_background }};
 
 $font-color: {{ site.site_colors.primary_font }};
 $secondary-font-color: {{ site.site_colors.secondary_font }};
 $tertiary-font-color: {{ site.site_colors.tertiary_font }};
+$accent: #eea900;
+$accent-text: #ff8c3b;
+$opposite-accent: #76d39e;
+$glossary-color: #76d39e;
+$glossary-text-color: white;
 
-$heading-font: 'sans-serif';
-$content-font: 'serif';
-$code-font: 'monospace';
+
+
+$heading-font: sans-serif;
+$content-font: sans-serif;
+$code-font: monospace;
 
 @import "master";
 
