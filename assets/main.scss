@@ -21,6 +21,11 @@ $heading-font: sans-serif;
 $content-font: sans-serif;
 $code-font: monospace;
 
+$desktop: "only screen and (min-width: 1000px)";
+$mobile: "only screen and (max-width: 999px)";
+$table-collapse: "only screen and (max-width: 815px)";
+
+
 @import "master";
 
 

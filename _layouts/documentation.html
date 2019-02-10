@@ -2,22 +2,23 @@
 layout: default
 ---
 
-<header>
-  <a class="text" href="/consumer.html">
-    {% assign current_collection = site.collections | where: "label", page.collection | first %}{{ current_collection.title }}
-  </a>
-</header>
 <div id="page">
-  <nav>
-    {% assign pages = site.proposal | sort: 'documentation_order' %}
-    {% for p in pages %}{% if p.documentation_order %}
-      <span class="nav_item{% if p.title == page.title %} selected{% endif %}">
-        <a href="{{ p.url }}">{{ p.title }}</a>
-      </span>
-      {% endif %}{% endfor %}
-  </nav>
-  <article>
-  {{ content }}
-  </article>
+  <header>
+    <a class="text" href="/consumer.html">
+      {% assign current_collection = site.collections | where: "label", page.collection | first %}{{ current_collection.title }}
+    </a>
+  </header>
+  <div id="columns">
+    <nav>
+      {% assign pages = site.proposal | sort: 'documentation_order' %}
+      {% for p in pages %}{% if p.documentation_order %}
+        <span class="nav_item{% if p.title == page.title %} selected{% endif %}">
+          <a href="{{ p.url }}">{{ p.title }}</a>
+        </span>
+        {% endif %}{% endfor %}
+    </nav>
+    <article>
+    {{ content }}
+    </article>
+  </div>
 </div>
-
