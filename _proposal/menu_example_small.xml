@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<menu xmlns="https://402receipts.info/TODO">
+<menu xmlns="https://402.TBD">
   <scope>https://www.example.com/</scope>
   <resources>
     <resource>
@@ -17,7 +17,7 @@
             <cost>
               <units>USD</units>
               <amount>0.05</amount>
-            <cost>
+            </cost>
           </costs>
         </definition>
       </definitions>
