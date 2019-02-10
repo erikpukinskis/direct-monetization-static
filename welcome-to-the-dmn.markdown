@@ -17,7 +17,7 @@ We will develop open source tools for use with the 402-Receipts protocol, and of
 
 **The proposed [402-Receipts standard]({{"/introduction.html" | relative_url}}) will be an open standard.** It will move to its own website as soon as the name is settled. We are seeking feedback from the public and prospective users.
 
-{: .call-to-action}[Read the standard](/introduction.html)
+[Read the standard](/introduction.html){:.call-to-action}
 
 </div>
 
