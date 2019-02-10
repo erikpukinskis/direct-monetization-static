@@ -4,7 +4,7 @@ layout: default
 
 <header>
   <a class="text" href="/consumer.html">
-    {{ site.collections.proposal.title }}
+    {% assign current_collection = site.collections | where: "label", page.collection | first %}{{ current_collection.title }}
   </a>
 </header>
 <div id="page">
