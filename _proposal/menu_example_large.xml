@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<menu xmlns="https://402receipts.info/TODO">
+<menu xmlns="https://402.TBD">
   <scope>https://www.example.com/</scope>
   <resources>
     <resource>
@@ -17,7 +17,7 @@
             <cost>
               <units>USD</units>
               <amount>0.05</amount>
-            <cost>
+            </cost>
           </costs>
         </definition>
       </definitions>
@@ -81,15 +81,15 @@
     </resource>
     <resource>
       <loc>https://www.example.com/lambda</loc>
+      <verbs>
+        <verb>POST</verb>
+        <verb>PUT</verb>
+        <verb>CUSTOM</verb>
+      </verbs>
       <definitions>
         <definition>
           <domain>https://www.example.com/</domain>
           <item>/lambda</item>
-          <verbs>
-            <verb>POST</verb>
-            <verb>PUT</verb>
-            <verb>CUSTOM</verb>
-          </verbs>
           <signers>
             <signer>https://receipts.notary.com/canonical/path</signer>
           </signers>
@@ -99,32 +99,32 @@
             <cost>
               <units>USD</units>
               <amount>0.50</amount>
-            <cost>
+            </cost>
             <cost>
               <units>EUR</units>
               <amount>0.44</amount>
-            <cost>
+            </cost>
             <cost>
               <units>AUD</units>
               <amount>0.69</amount>
-            <cost>
+            </cost>
             <cost>
               <units>INR</units>
               <amount>35.6</amount>
-            <cost>
+            </cost>
           </costs>
         </definition>
       </definitions>
     </resource>
     <resource>
       <loc>https://www.example.com/lambda</loc>
+      <verbs>
+        <verb>GET</verb>
+      </verbs>
       <definitions>
         <definition>
           <domain>https://www.example.com/</domain>
           <item>/lambda</item>
-          <verbs>
-            <verb>GET</verb>
-          </verbs>
           <signers>
             <signer>https://receipts.notary.com/canonical/path</signer>
           </signers>
@@ -134,19 +134,19 @@
             <cost>
               <units>USD</units>
               <amount>0.005</amount>
-            <cost>
+            </cost>
             <cost>
               <units>EUR</units>
               <amount>0.004</amount>
-            <cost>
+            </cost>
             <cost>
               <units>AUD</units>
               <amount>0.007</amount>
-            <cost>
+            </cost>
             <cost>
               <units>INR</units>
               <amount>0.4</amount>
-            <cost>
+            </cost>
           </costs>
         </definition>
       </definitions>
