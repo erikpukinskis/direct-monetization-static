@@ -44,7 +44,7 @@ Receipts-Accepts: eNpVkFFugzAQRP97CpQDeBFqWqna+qPKDdoewCIbsIrXFrsROX4MhpD6a954PF
 We provide two example {% include link s=site.data.glossary.menu_xml %} files. These links go directly to the xml files.
 
 - [/menu_example_small.xml](/menu_example_small.xml)
-- [/menu_example_large.xml](/menu_example_large.xml)
+- [/menu_example_large.xml](/menu_example_large.xml) (Also shows a broader variety of Receipt Definitions)
 
 ## Schema
 [The XSD itself is here.]({{ "/402receipts.xsd" | absolute_url }})
