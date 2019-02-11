@@ -34,9 +34,39 @@ body {
     margin: 0 10vw;
     max-width: 1300px;
   }
+
   @media #{$mobile} {
     margin: 0 10px;
     max-width: 90%;
+  }
+}
+
+#splash-page {
+  width: 100%;
+
+  header, .splash-inner, .post-splash-content {
+    margin: auto;
+    @media #{$desktop} {
+      max-width: 800px;
+    }
+
+    @media #{$mobile} {
+      max-width: 90%;
+    }
+  }
+
+  header {
+    margin-top: 60px;
+  }
+
+  .splash {
+    font-size: 1.2em;
+    background-image: url(/assets/splash-background.gif);
+    width: 100%;
+    margin-top: -200px;
+    padding-top: 200px;
+    z-index: -1;
+    padding-bottom: 40px;
   }
 }
 
@@ -270,15 +300,6 @@ ul.xsd_restriction_list {
       font-size: 65%;
     }
   }
-}
-
-
-.splash {
-  font-size: 1.2em;
-  background-image: url(/assets/splash-background.gif);
-  display: block;
-  margin: -200px -1000px 0 -1000px;
-  padding: 200px 1000px 50px 1000px;
 }
 
 .call-to-action {
