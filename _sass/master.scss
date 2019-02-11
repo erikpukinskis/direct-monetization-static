@@ -30,6 +30,7 @@ body {
 }
 
 #page {
+  overflow: hidden;
   @media #{$desktop} {
     margin: 0 10vw;
     max-width: 1300px;
