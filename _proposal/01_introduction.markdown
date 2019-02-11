@@ -7,10 +7,12 @@ documentation_order: 1
 ---
 
 # Version negative one.
-#### Goal of this document:
-This document describes a standard way for a website to demand or accept payment for access to resources without having a prior relationship with the customer or at any point collecting any card/bank information. The proposed standard is a suite of HTTPS headers, HTML head elements, and surrounding utilities to make direct monetization of web-accessible resources low-stress and safe even for non-specialist human users.
 
-The standard needs to be sufficiently defined that tools within it can be built independently and work together. It must be a suitable tool for producers and consumers, so if you have questions, ideas, or suggestions about the technical details or about the high-level user experience then please reach out to us. 
+> #### Goal of this document:
+>
+> This document describes a standard way for a website to demand or accept payment for access to resources without having a prior relationship with the customer or at any point collecting any card/bank information. The proposed standard is a suite of HTTPS headers, HTML head elements, and surrounding utilities to make direct monetization of web-accessible resources low-stress and safe even for non-specialist human users.
+>
+> The standard needs to be sufficiently defined that tools within it can be built independently and work together. It must be a suitable tool for producers and consumers, so if you have questions, ideas, or suggestions about the technical details or about the high-level user experience then please reach out to us. 
 
 ## How to help
 This website is on [GitHub](https://github.com/ShapeOfMatter/direct-monetization-static); pull requests are welcome. You can also email us with questions or suggestions at <dmn@directmonetization.network>.

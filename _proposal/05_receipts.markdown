@@ -9,8 +9,9 @@ summary: How receipts are composed, signed, used, and validated. (work in progre
 
 A receipt is a message specifying that someone paid for access to a resource, or should otherwise be given access to the resource.
 
-## _The exact formatting, encoding, cryptographic signatures, and compression scheme for receipts have not yet been determined._
-_**In particular, a partially blind signature is desirable for the receipt; we hesitate to commit to other details until a suitable (portable, trusted) implementation can be identified.**_
+> #### The exact formatting, encoding, cryptographic signatures, and compression scheme for receipts have not yet been determined.
+>
+> In particular, a partially blind signature is desirable for the receipt; we hesitate to commit to other details until a suitable (portable, trusted) implementation can be identified.
 
 There are several objects nested inside each other that, in different circumstances, might each be called a receipt.
 
@@ -38,5 +39,6 @@ The receipt submission will contain the Signed Receipt (Bare Receipt plus Notary
 
 ## Bundled Receipts
 In the case that the Client should have access because of previously submitted payments they have made _for other resources_, a list of the `uuid`s of those receipts may be used in place of the Signed Receipt in the Receipt Submission. The Host will typically enforce that the Client signature of such a receipt match the submission signatures of all the listed receipts.  
+
 For example, a website might give Receipt Definitions to the effect of _"Pages are \$0.05 each, up to \$3.00/month."_. Once a customer had viewed enough pages that their receipts for that month totaled \$3.00, their Client would begin submitting Bundled Receipts instead of buying a receipt for each page. 
 
