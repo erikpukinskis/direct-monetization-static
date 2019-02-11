@@ -1,88 +1,13 @@
+@import 'timeline';
+@import 'nav';
+@import 'landing-page';
+@import 'layout';
+
 body {
   font-family: $content-font;
   background-color: $primary-color;
-  margin: 0;
   color: $font-color;
   font-size: 15px;
-}
-
-header {
-  font-family: $heading-font;
-  font-size: 24px;
-  line-height: 1.55em;
-  margin: 40px 0;
-
-  &.extra-space {
-    margin-top: 60px;
-  }
-
-  .text {
-    background: $block-color;
-    color: white;
-    padding: 5px 20px 5px 3px;
-    text-decoration: none;
-  }
-}
-
-body {
-  display: flex;
-  justify-content: center;
-}
-
-#page {
-  overflow: hidden;
-  @media #{$desktop} {
-    margin: 0 10vw;
-    max-width: 1300px;
-  }
-
-  @media #{$mobile} {
-    margin: 0 10px;
-    max-width: 90%;
-  }
-}
-
-#splash-page {
-  width: 100%;
-  margin-bottom: 100px;
-
-  header, .splash-inner, .post-splash-content {
-    margin: auto;
-    @media #{$desktop} {
-      max-width: 800px;
-    }
-
-    @media #{$mobile} {
-      max-width: 90%;
-    }
-  }
-
-  header {
-    margin-top: 60px;
-  }
-
-  .splash {
-    font-size: 1.2em;
-    background-image: url(/assets/splash-background.gif);
-    width: 100%;
-    margin-top: -200px;
-    padding-top: 200px;
-    z-index: -1;
-    padding-bottom: 40px;
-  }
-}
-
-#columns {
-  display: flex;
-  flex-direction: row;
-
-  @media #{$mobile} {
-    flex-direction: column;
-  }
-}
-
-article {
-  display: block;
 }
 
 code {
@@ -90,79 +15,6 @@ code {
   max-width: 100%;
   overflow: hidden;
   vertical-align: middle;
-}
-
-nav {
-  margin-bottom: 30px;
-
-  @media #{$desktop} {
-    margin-right: 45px;
-  }
-}
-
-.nav_item {
-  color: $secondary-font-color;
-  white-space: nowrap;
-  display: inline-block;
-
-  &.selected a {
-    color: #27cb6e;
-    text-decoration: none;
-  }
-
-  @media #{$mobile} {
-    background: $light-color;
-    padding: 10px 15px 5px 15px;
-    margin-right: 10px;
-    margin-bottom: 5px;
-
-    a {
-      text-decoration: none;
-    }
-
-    border-bottom: 5px solid $light-color;
-
-    &.selected {
-      border-bottom: 5px solid $opposite-accent;
-    }
-  }
-
-  @media #{$desktop} {
-    min-width: 9em;
-    max-width: 9em;
-    display: block;
-    margin-bottom: 10px;
-    line-height: 40px;
-
-    a {
-      display: block;
-      padding-left: 2px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    &.selected a {
-      margin-left: -2px;
-      background: $light-color;
-      margin-right: -0.65em;
-      position: relative;
-      padding-left: 8px;
-      border-left: 5px solid #27cb6e;
-
-      &:after {
-        z-index: -1;
-        display: block;
-        position: absolute;
-        right: -14px;
-        top: 6px;
-        transform: rotate(45deg);
-        vertical-align: middle;
-        content: "";
-        background: $light-color;
-        width: 28px;
-        height: 28px;
-      }
-    }
-  }
 }
 
 h1 {
@@ -323,70 +175,6 @@ blockquote {
       content: " 🔗";
       font-size: 65%;
       vertical-align: middle;
-    }
-  }
-}
-
-.call-to-action {
-  display: block;
-  margin: 30px auto 0 auto;
-  padding: 14px 20px 10px 20px;
-  color: white;
-  font-size: 24px;
-  text-decoration: none;
-  width: 9em;
-  text-align: center;
-  -webkit-font-smoothing: antialiased;
-  background: $accent;
-  border-bottom: 3px solid $accent-text;
-  border-radius: 6px;
-  box-shadow: 2px 4px 7px rgba(255, 0, 0, 0.4);
-}
-
-
-ul.timeline {
-  list-style-type: none;
-
-  li {
-    em {
-      display: block;
-      font-weight: bold;
-      color: $opposite-accent;
-      font-style: normal;
-      margin-bottom: 0.25em;
-      -webkit-font-smoothing: antialiased;
-    }
-    position:relative; /* so that pseudoelements are positioned relatively to their "li"s*/
-    /* use padding-bottom instead of margin-bottom.*/ 
-    margin-bottom: 0; /* This overrides previously specified margin-bottom */
-    padding-bottom: 2.5em;
-
-    &:after {
-      /* bullets */
-      content: "●";
-      color: $opposite-accent;
-      font-size: 18px;
-      position: absolute;
-      left: -20px; /*adjust manually*/
-      top: -4px;
-    }
-
-    &:before {
-      /* lines */
-      content:"";
-      position: absolute;
-      left: -16px; /* adjust manually */
-      border-left: 3px solid $opposite-accent;
-      height: 100%;
-      width: 1px;
-    }
-
-    &:first-child:before {
-     top: 6px; /* moves the line down so that it disappears under the bullet. */
-    }
-
-    &:last-child:before {
-     height: 6px; /* shorten the line so it goes only up to the bullet. */
     }
   }
 }
