@@ -20,7 +20,7 @@ ul.timeline {
 
     &:after {
       /* bullets */
-      content: "●";
+      content: "\25cf";
       color: $accent;
       font-size: 18px;
       position: absolute;
